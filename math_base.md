@@ -78,9 +78,9 @@ $$
 \nabla f = (\dfrac{\partial f}{\partial x_1},\dfrac{\partial f}{\partial x_2}, \cdots, \dfrac{\partial f}{\partial x_n}),\;\Delta x := (\Delta x_1, \Delta x_2, \cdots, \Delta x_n) \\
 \Delta z = \nabla f \cdot \Delta x
 $$
-이와 같이 $\nabla f = (\dfrac{\partial f}{\partial x_1},\dfrac{\partial f}{\partial x_2}, \cdots, \dfrac{\partial f}{\partial x_n})$ 로 다변수함수$f$를 각 정의역 변수들에 대해 편미분한 것을 벡터로 모은 연산을 델 연산자(_Del operator_)라고 한다.
+이와 같이 $\nabla f = (\dfrac{\partial f}{\partial x_1},\dfrac{\partial f}{\partial x_2}, \cdots, \dfrac{\partial f}{\partial x_n})$ 로 다변수함수$f$를 각 정의역 변수들에 대한 편미분들을 벡터로 표현한 연산을 델 연산자(_Del operator_)라고 한다.
 
 #### 경사하강법
 경사하강법을 기하학적인 의미로 보면, 함수의 그래프 상 임의의 위치에서 가장 경사가 급한 방향으로 매 단계 재귀적으로 이동하면서 극솟값 지점을 찾는 방법이라고 할 수 있을 것이다. 
 
-출처: 처음 배우는 딥러닝 수학(와쿠이 요시유키, 와쿠이 사다미 저, 박광수 옮김), 한빛미디어, 2018
+> 출처: 처음 배우는 딥러닝 수학(와쿠이 요시유키, 와쿠이 사다미 저, 박광수 옮김), 한빛미디어, 2018
