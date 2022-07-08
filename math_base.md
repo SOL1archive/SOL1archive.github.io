@@ -16,7 +16,8 @@ f_{activ}(x) =
 \frac{1}{1 + e^{-x}}
 $$
 딥러닝은 이와 같이 모델링된 뉴런들을 다중 레이어에 배치하여 구현한다.
-### 벡터
+
+### 벡터(_Vector_)
 뉴런의 수학적 모델링은 이와 같이 표현가능하지만, 더 간편한 표현을 위해 벡터와 행렬을 사용한다. 벡터는 기저의 실수배의 합을 통해 정의된다. 기저는 벡터공간을 선형생성하는, 선형독립인 단위벡터로 정의한다. 쉽게 표현하면, 임의의 $N$차원 공간의 $x$축, $y$축과 같은 축의 양의 방향을 가지는, 크기가 1인 벡터이다. 기저는 $\overrightarrow{e_1},\;\overrightarrow{e_2},\;\cdots,\;\overrightarrow{e_n}$과 같이 표현한다. 벡터는 기저들의 실수배의 합으로 정의된다. 가령 벡터$\overrightarrow{v}$의 시점이 $(0, 0)$이고, 종점이 $(3, 2)$일 때, 벡터 $\overrightarrow{v}$는 다음과 같이 표현가능하다.
 $$
 \overrightarrow{v} = 3\overrightarrow{e_1} + 2\overrightarrow{e_2}=\;(3, 2)
@@ -34,7 +35,7 @@ $$
 y = f_{activ}(\overrightarrow{w} \cdot \overrightarrow{x} + b)
 $$
 
-## 회귀분석
+## 회귀분석(_Regression_)
 회귀분석은 변수 혹은 변수들(_feature_)과 다른 한 변수(_target_)의 관계를 분석하는 통계적 기법이다. 회귀분석은 머신러닝에서 광범위하게 쓰이지만, 그 중 선형회귀는 신경망 학습에 쓰이기도 한다. 선형회귀는 직선의 방정식을 회귀방정식으로 사용하는 회귀분석이다. 가령 다음과 같은 데이터가 있다고 해보자.
 |$x$|$y$|
 |-|-|
@@ -52,4 +53,21 @@ $$
 \dfrac{\partial\;C_T}{\partial p} = 0\;\land\;\dfrac{\partial\;C_T}{\partial q} = 0
 $$
 
-### 경사하강법
+### 경사하강법(_Gradient Descend_)
+
+최솟값의 필요조건은 최솟값의 조건에 대해서만 말해줄 뿐, 구체적으로 어떤 값인지, 어떻게 찾을 수 있는지를 알려주지는 않는다. 이를 위해서는 수치해석에 기반한 수학적 최적화 방법인 경사하강법(_Gradient Descend_)를 이용하기도 한다. 경사하강법을 이해하기 위해선 우선 선형근사와 델 연산자에 대해서 이해해야 한다. 먼저 미분의 정의에 선형근사를 적용하면 다음과 같다.
+$$
+\dfrac{df}{dx} \approx \frac{f(x + \Delta x) - f(x)}{\Delta x} \\
+\Leftrightarrow f(x + \Delta x) - f(x) \approx \dfrac{df}{dx}\Delta x 
+$$
+이를 이변수함수로 확장해보자.
+$$
+\Delta z = f(x + \Delta x, y + \Delta y) - f(x, y) \approx \dfrac{\partial f(x, y)}{\partial x}\Delta x + \dfrac{\partial f(x, y)}{\partial y}\Delta y
+$$
+이와 같은 식은 다음과 같이 $n$개의 정의역 변수를 가지는 다변수 함수에 대한 식으로도 확장하기 좋다.
+$$
+\Delta y = f(x_1 + \Delta x_1, x_2 + \Delta x_2, \cdots, x_n + \Delta x_n) - f(x_1, x_2, \cdots, x_n) \\
+= \dfrac{\partial f}{\partial x_1} \Delta x_1 + \dfrac{\partial f}{\partial x_2} \Delta x_2 + \cdots + \dfrac{\partial f}{\partial x_n} \Delta x_n \\
+=\sum_{k=1}^n \dfrac{\partial f}{\partial x_k}\Delta x_k
+$$
+    
