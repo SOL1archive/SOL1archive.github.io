@@ -4,5 +4,5 @@
 
 layout: Post
 permalink: /
-title: SOL1 archive
+title: SOL1 Archive
 ---
