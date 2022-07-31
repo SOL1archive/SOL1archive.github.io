@@ -4,5 +4,17 @@
 
 layout: Post
 permalink: /
-title: Jekyll Garden
+title: SOL1 archive
 ---
+
+Hi! $w_i$ <- can you see this?
+
+$$
+f_{activ}(x) = 
+\begin{cases}
+1,\; x > 0 \\
+0,\; x < 0
+\end{cases} \\
+f_{activ}(x) = 
+\frac{1}{1 + e^{-x}}
+$$
