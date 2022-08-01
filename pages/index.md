@@ -5,4 +5,7 @@
 layout: Post
 permalink: /
 title: SOL1 Archive
+mathjax: true
 ---
+
+
