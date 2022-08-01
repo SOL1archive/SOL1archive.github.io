@@ -2,6 +2,7 @@
 title : SOL1 Archive
 feed: show
 date : 15-04-2021
+mathjax: true
 ---
 
 Hi! $w_i$ <- can you see this?
