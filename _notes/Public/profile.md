@@ -9,7 +9,7 @@ date: 27-07-2022
 - My Korean name is Subin Park and English name is Tom.
 
 ### Contact
-email: enlightkorean@gmail.com
+email: enlightkorean@gmail.com   
 Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 
 # Interests
