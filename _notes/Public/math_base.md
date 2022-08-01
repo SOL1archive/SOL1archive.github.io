@@ -1,5 +1,8 @@
 ---
 title: 머신러닝의 수학적 구현(_Mathematical Implementation of Machine Learning_)
+feed: show
+mathjax: true
+
 ---
 
 # 머신러닝의 수학적 구현
