@@ -1,6 +1,6 @@
 ---
 title : Markdown Rendered
-feed: hide
+feed: show
 date : 01-02-2021
 mathjax: true
 ---
