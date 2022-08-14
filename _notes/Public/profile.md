@@ -5,7 +5,8 @@ mathjax: true
 date: 27-07-2022
 ---
 
-- 👋 Hi, I’m SOL1, @SOL1archive
+- 👋 Hi, I’m Subin Park, @SOL1archive.
+- I'm from Korea and I lived in the Philippines for about an year.
 - My Korean name is Subin Park and English name is Tom.
 
 ### Contact
