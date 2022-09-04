@@ -4,7 +4,7 @@ feed: show
 mathjax: true
 ---
 
-* 목차
+* TOC
 {:TOC}
 
 라이프니츠로부터 시작된 수리논리학의 역사는 상당히 흥미롭다. 인문학과 수학, 언어학, 그 중에서 철학과 수학이 만나는 접점이기 때문이다. 초기 논리학은 수학과 다소 거리가 있었지만 [**고틀로프 프레게**](https://ko.wikipedia.org/wiki/%EA%B3%A0%ED%8B%80%EB%A1%9C%ED%94%84_%ED%94%84%EB%A0%88%EA%B2%8C)(_Gottlob Frege_)와 [**버트런드 러셀**](https://ko.wikipedia.org/wiki/%EB%B2%84%ED%8A%B8%EB%9F%B0%EB%93%9C_%EB%9F%AC%EC%85%80)(_Bertrand Russell_)이라는 두 철학자이자 수학자들의 만남으로 하나가 되었다. 수리논리학은 이후 모든 수학의 기초가 되어, 수학적 형식주의(_Mathematical Formalism_)을 기반으로 한 현대 수학의 시초가 되었으며, 컴퓨터의 탄생을 촉발시켰다.  
