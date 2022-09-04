@@ -2,6 +2,7 @@
 title: 수리논리학의 기초 - 논리학의 역사 (1)
 feed: show
 mathjax: true
+toc: true
 ---
 
 * TOC

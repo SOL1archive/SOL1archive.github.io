@@ -2,6 +2,7 @@
 title: 수리논리학 - 1차 술어 논리 (1)
 feed: show
 mathjax: true
+toc: true
 ---
 
 > By relieving the brain of all unnecessary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases the mental power of the race.      - Alfred North Whitehead -
