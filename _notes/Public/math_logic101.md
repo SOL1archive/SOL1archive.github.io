@@ -13,7 +13,7 @@ toc: true
 
 
 * TOC
-{:TOC}
+{:toc}
 
 {:#1차 술어 논리}
 ## 1차 술어 논리(_FOL: First Order Logic_)
