@@ -74,4 +74,5 @@ mathjax: true
 
 ### 모순 (_Contradiction_)
 
+
 ## 공리와 정리
