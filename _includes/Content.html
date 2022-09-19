@@ -31,6 +31,8 @@
 
 
 <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 <div class="content">
     {%- if site.preferences.wiki_style_link.enabled -%}
         {%- assign content_array = content | split:'[[' -%}
