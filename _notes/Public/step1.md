@@ -34,7 +34,7 @@ $$
 - 각각의 뉴런은 그에 해당하는 피처를 입력받고 그에 따라 타겟을 예측할 수 있다.
     - 예를 들어, 다음과 같은 주택 가격 예측 모델을 구성할 수 있다.
 
-```mermaid
+<div class="mermaid"> 
 graph LR
 S([Size]) --> NF[Family Size]
 B(# Bedrooms) --> NF
@@ -45,7 +45,8 @@ NF --> NT[Price]
 NW --> NT
 NS --> NT
 NT --> Y((Y: Target))
-```
+</div>
+
 {:#지도학습}
 ## 지도학습
 - 지도학습은 머신러닝의 한 종류로 광고 추천, 컴퓨터 비전 등 다양한 분야에 적용될 수 있다.

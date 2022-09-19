@@ -30,7 +30,7 @@ $$
 ## 로지스틱 회귀
 로지스틱 회귀는 이진분류 모델 중 하나이다.
 
-주어진 피처 $X$ 에 대해 $\hat y$ 가 의미하는 바는 $y$ 가 1일 확률인 $\hat y = P(y = 1|X), (X \in \mathbb{R}^{n_x})$ 이다.
+주어진 피처 $X$ 에 대해 $\hat y$ 가 의미하는 바는 $y$ 가 1일 확률인 $\hat y = P(y = 1|X), (X\ \in \mathbb{R}^{n_x})$ 이다.
 
 파라미터 $w$, $b$는 $w \in \mathbb{R}^{n_x}, b \in \mathbb{R}$ 이다. 
 
@@ -137,39 +137,39 @@ $$
 
 이는 다음과 같은 계산 그래프로 표현이 가능하다.
 
-```mermaid
+<div class="mermaid"> 
 graph LR
 A([a]) --> V[V = a + u]
 B([b]) --> U[u = bc]
 C([c]) --> U
 U --> V
 V --> J[J = 3v]
-```
+</div>
 
 $(a, b, c) = (5, 3, 2)$ 라면,
 
-```mermaid
+<div class="mermaid"> 
 graph LR
 A([a = 3]) --> V[V = a + u = 11]
 B([b = 3]) --> U[u = bc = 6]
 C([c = 2]) --> U
 U --> V
 V --> J[J = 3v = 33]
-```
+</div>
 
 이와 같은 계산 그래프 표현은 비용함수 $J$ 와 같이 특정 출력값 변수를 최적화하는 데에 유용하게 사용할 수 있다.
 
 {:#계산 그래프를 이용한 미분}
 ## 계산 그래프를 이용한 미분
 
-```mermaid
+<div class="mermaid"> 
 graph LR
 A([a = 3]) --> V[V = a + u = 11]
 B([b = 3]) --> U[u = bc = 6]
 C([c = 2]) --> U
 U --> V
 V --> J[J = 3v = 33]
-```
+</div>
 
 다음과 같은 계산 그래프가 있을 때, $\frac {dJ}{dv}$ 는 3임을 쉽게 확인할 수 있다. 이는 $J$ 에서 $v$ 로 역전파한 것이라고 볼 수 있을 것이다. 또, $\frac {dJ}{da} = 3$ 인 것도 쉽게 확일 할 수 있을 것이다. 이는 연쇄법칙으로 다음과 같이 표현 가능하다.
 
@@ -193,7 +193,7 @@ $$
 ## 로지스틱 회귀의 경사하강법
 로지스틱 회귀는 다음 계산 그래프로 표현 가능하다.
 
-```mermaid
+<div class="mermaid"> 
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
 flowchart LR
 X1([X1]) --> Z[w_1x_1 + w_2x_2 + b]
@@ -203,7 +203,7 @@ W2([w2]) --> Z
 B([b]) --> Z
 Z --> Y[y = a = 6]
 Y --> L[L]
-```
+</div>
 
 역전파를 통해 $dw_1$ , $dw_2$ 를 구할 수 있다.
 
