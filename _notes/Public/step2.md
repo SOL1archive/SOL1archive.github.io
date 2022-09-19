@@ -1,6 +1,6 @@
 ---
 title: 머신러닝 노트(2)
-feed: hide
+feed: show
 mathjax: true
 ---
 
@@ -256,4 +256,6 @@ db /= m
 이 코드는 경사하강법의 한 단계를 수행한 것으로, 경사하강법을 수행할 때는 이를 반복한다.
 이런 명시적인 `for`문은 다소 비효율적이므로 벡터화라는 방식을 이용해 벡터화를 통해 명시적인 `for`문 없이 학습을 구현한다.
 
+
+> 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
