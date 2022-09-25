@@ -6,8 +6,8 @@ mathjax: true
 
 {:toc}
 
-{:#이진분류}
-## 이진분류
+{:#이진분류(_Binary Classification_)}
+## 이진분류(_Binary Classification_)
 - 이진분류는 입력을 두 범주 중 하나로 분류하는 것을 의미한다.
 - 이진분류의 데이터셋은 다음과 같이 수학적으로 표기될 수 있다.
 
@@ -26,12 +26,11 @@ X_1&X_2&\cdots&X_m\\
 Y= [y_1,\ y_2,\ \cdots,\ y_m], (Y \in \mathbb{R}^{1 \times m})
 $$
 
-{:#로지스틱 회귀}
-## 로지스틱 회귀
+{:#로지스틱 회귀(_Logistic Regression_)}
+## 로지스틱 회귀(_Logistic Regression_)
 로지스틱 회귀는 이진분류 모델 중 하나이다.
 
 주어진 피처 $X$ 에 대해 $\hat y$ 가 의미하는 바는 $y$ 가 1일 확률인 $\hat y = P(y = 1|X), (X\ \in \mathbb{R}^{n_x})$ 이다.
-
 파라미터 $w$, $b$는 $w \in \mathbb{R}^{n_x}, b \in \mathbb{R}$ 이다. 
 
 이를 이용해 $\hat y$ 을 표현하기 위해 가장 먼저 시도해 볼 수 있는 것은, 선형방정식의 형태로 다음과 같이 표현하는 것이다.
@@ -76,8 +75,8 @@ z\ is\ large \rightarrow \sigma (z) \approx \frac {1}{1 + 0} = 1 \\
 z\ is\ large\ neg. \rightarrow \sigma (z) \approx \frac {1}{1 + (Big\ Num)} \approx 0
 $$
 
-{:#비용함수}
-## 비용함수
+{:#비용함수(_Cost Function_)}
+## 비용함수 (_Cost Function_)
 로지스틱 회귀를 학습시키기 위해선 먼저 비용함수를 정의해야 한다. 비용함수는 훈련 데이터셋에 대해 예측이 얼마나 잘 되었는지 측정해주는 함수이다.
 
 $$
@@ -118,12 +117,12 @@ J(w,\ b) = \frac {1}{m} \sum_{i = 1}^m L(\hat {y_i}, y_i) \\
 = -\frac {1}{m} \sum_{i = 1}^m (y\ log\ \hat y + (1 - y)\ log(1 - \hat y))
 $$
 
-{:#경사하강법}
-## 경사하강법
+{:#경사하강법(_Gradient Descent_)}
+## 경사하강법(_Gradient Descent_)
 좋은 모델을 얻기 위해선 $J(w,\ b)$ 을 가장 작게 만드는 $w, b$ 를 찾는 게 중요할 것이다. 우리는 비용함수를 전역적으로 아래로 볼록하게 정의했다. 따라서 어느 한 지점에서 시작했을 때, 반복적으로 경사를 따라 하강하면 비용함수를 가장 작게 하는 지점에 도달할 수 있을 것이다.
 
-{:#계산 그래프}
-## 계산 그래프
+{:#계산 그래프(_Computational Graph_)}
+## 계산 그래프(_Computational Graph_)
 신경망에는 전방향 전파와 역전파가 있다. 전방향 전파는 신경망의 출력값을 계산하고, 역방향 전파는 신경망의 경사와 도함수를 계산한다.
 
 이를 설명하기 위해 먼저 다음과 같은 비용함수를 정의해보자.
