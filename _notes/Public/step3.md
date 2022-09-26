@@ -248,8 +248,9 @@ $$
 P(y|x) = {\hat y}^y (1 - \hat y)^{(1 - y)}
 $$
 
-이는 $P(y|x)$ 의 정확한 정의이다.
-그리고 로그함수는 강한 단조 증가함수이기 때문에, $log\ P(y|x)$ 를 최대화 하는 것은 $P(y|x)$ 를 최대화 하는 것과 같다. 그리고 $log\ P(y|x)$ 는 로그함수의 성질에 따라 다음과 같이 표현할 수 있다.
+이는 $P(y \lvert x)$ 의 정확한 정의이다.
+
+그리고 로그함수는 강한 단조 증가함수이기 때문에, $log\ P(y \lvert x)$ 를 최대화 하는 것은 $P(y \lvert x)$ 를 최대화 하는 것과 같다. 그리고 $log\ P(y \lvert x)$ 는 로그함수의 성질에 따라 다음과 같이 표현할 수 있다.
 
 $$
 log\ P(y \lvert x) = y\ log \ \hat y + (1 - y)\ log(1 - \hat y) \\
@@ -273,7 +274,7 @@ $$
 결과적으로 비용함수는 다음과 같이 표현된다.
 
 $$
-J(w, b) = \frac{1}{m} \sum_{i = 1}^m L({\hat y}_i,\ y_i )
+J(w, b) = \frac{1}{m} \sum_{i = 1}^m L({\hat y}_i,\ y_i)
 $$
 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
