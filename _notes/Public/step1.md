@@ -88,3 +88,6 @@ $$
 - 시그모이드 함수의 문제점은 Gradient가 소실된다는 것이다. $x$가 0에서 충분히 멀어지면, 시그모이드 함수의 미분계수는 0에 가까워진다. 학습에 Gradient를 사용하는 머신러닝의 특성상, 각 미분계수가 0에 가까워진다는 것은 학습의 정도가 작아진다는 것을 의미한다.
 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
+
+> ||[다음 포스트](https://sol1archive.github.io/note/step2)|
+> |-|-|
