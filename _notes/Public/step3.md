@@ -278,3 +278,6 @@ J(w, b) = \frac{1}{m} \sum_{i = 1}^m L({\hat y}_i,\ y_i)
 $$
 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
+
+> |[이전 포스트](https://sol1archive.github.io/note/step2)||
+> |-|-|
