@@ -308,7 +308,7 @@ $$
 ## 활성화 함수의 미분
 다양한 활성화 함수의 도함수를 구해보자. 활성화 함수의 도함수를 구하는 것은 수치해석적 미분이 아닌 기호적 미분을 수행하므로, 미세하지만 더 정확하고 일반적으로 속도가 더 빠르다.
 
-- 시그모이드 함수
+- 시그모이드 함수 \\
     $$
     \sigma (z) = \frac{1}{1 + e^{-z}}\\
     \ \\
@@ -317,14 +317,14 @@ $$
     = \sigma (z) \left(1 - \sigma (z)\right)
     $$
 
-- $tanh$
+- $tanh$ \\
     $$
     tanh (z) = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}}\\
     \ \\
     \frac{d}{dz} tanh (z) = 1 - \left(tanh(z) \right)^2
     $$
 
-- ReLU / Leaky ReLU
+- ReLU / Leaky ReLU \\
     $$
     f_{ReLU}(z) = 
     \begin{cases}
