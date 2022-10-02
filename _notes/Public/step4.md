@@ -119,6 +119,7 @@ $$
 
 그렇다면 $z^{[1]}$ 는 다음과 같이 표현 가능하다.
 
+> Note. 다음 내용은 선형대수의 기초적인 내용을 숙지한 것을 가정하고 있음. 선형 대수는 관련 교과서 혹은 유튜버 [3Blue1Brown](https://www.youtube.com/c/3blue1brown)의 [선형대수학의 본질 시리즈](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) 를 보기를 권함. 대수는 머신러닝 뿐만 아니라 컴퓨터의 다양한 분야에 광범위하게 사용되므로 선형대수를 제대로 이해하는 것도 좋음.
 
 $$
 z^{[1]} = W^{[1]T} x + b^{[1]} \\
