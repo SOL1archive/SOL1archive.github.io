@@ -216,7 +216,7 @@ dZ = A - Y
 dw = np.dot(X, dZ.T) / m
 db = np.sum(dZ) / m
 
-## n은 학습률
+# n은 학습률
 w = w - n * dw
 b = b - n * db
 ```
@@ -277,6 +277,7 @@ $$
 J(w, b) = \frac{1}{m} \sum_{i = 1}^m L({\hat y}_i,\ y_i)
 $$
 
+> 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
 
-> [이전 포스트](https://sol1archive.github.io/note/step2) | 
+> [이전 포스트](https://sol1archive.github.io/note/step2) | [다음 포스트](https://sol1archive.github.io/note/step4) 
