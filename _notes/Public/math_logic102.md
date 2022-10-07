@@ -4,6 +4,15 @@ feed: hide
 mathjax: true
 ---
 
+> Then you will know the truth, and the truth will set you free. \
+> \
+> John 8:32
+
+> 진리를 알지니, 진리가 너희를 자유케 하리라. \
+> \
+> 요한복음 8:32
+
+
 {:toc}
 
 {:#연산자}
@@ -13,7 +22,7 @@ mathjax: true
 ### 부정 (_Negation_)
 > $\neg P$
 
-부정은 문장의 거짓을 표현하는 기호이다. 부정은 자연어에서 
+부정은 문장의 거짓을 표현하는 기호이다. 부정은 자연어에서 흔히 사용되는 표현이지만, 자연어의 모호함으로 인해 다양한 오류를 범하기도 하는 표현이기도 하다. 그래서 부정을 다룰 때는 특히나 이후 서술할 추론 규칙이 더욱 빛을 발한다. 추론 규칙을 이용해 부정을 사용한 논리를 오류의 여지 없이 다룸으로써 더욱 정교하고 복잡한 논리 전개를 가능케 한다.
 
 {:##진리표}
 ### 진리표 (_Truth Table_)
@@ -49,7 +58,17 @@ mathjax: true
 조건은 다음의 논리식과 동치이다.
 > $\neg P_1 \lor P_2$
 
-이는 다음의 진리표를 이용해 쉽게 증명이 가능하다.
+이를 통해 흔히 일으키는 오류인 전건 부정의 오류가 오류임을 증명할 수 있다. 전건 부정의 오류는 다음과 같은 귀납법으로 증명할 수 있다.
+
+먼저 다음 명제 $G$ 가 가정을 세우자.
+
+> $G : \neg (P_1 \rightarrow P_2) \equiv P_2 \rightarrow P_1$ \
+> 의미) \
+> $G$ : 조건문 $P_1 \rightarrow P_2$ 의 부정이 $P_2 \rightarrow P_1$ 이다. 
+
+$P_1 \rightarrow P_2 \equiv \neg P_1 \lor P_2$ 이므로, $\neg (P_1 \rightarrow P_2) \equiv \neg(\neg P_1 \lor P_2)$ 이다. 그리고 드 모르간의 법칙에 의하여 $\neg(\neg P_1 \lor P_2) \equiv P_1 \land \neg P_2$ 이다. 한편, 앞서 설명한 조건문의 동치에 의해 $P_2 \rightarrow P_1 \equiv \neg P_2 \lor P_1$ 이 성립한다. $P_1 \land \neg P_2$ 와 $\neg P_2 \lor P_1$ 동치가 아니므로, 모순이 발생한다. 따라서 주어진 가정 $G$ 는 거짓임을 확인할 수 있다.
+
+한편, 이는 다음의 진리표를 이용해서도 쉽게 증명이 가능하다.
 |$P_1$|$P_2$|$P_1 \rightarrow P_2$|$\neg P_1 \lor P_2$|
 |:-:|:-:|:-:|:-:|
 |T|T|T|T|
@@ -75,4 +94,15 @@ mathjax: true
 ### 모순 (_Contradiction_)
 
 
+## 양화사
+
+### 보편양화사 ()
+
+
+### 존재양화사
+
+
+
 ## 공리와 정리
+
+

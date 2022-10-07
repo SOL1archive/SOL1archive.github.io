@@ -345,14 +345,14 @@ $$
     $z = 0$ 인 경우, 좌미분계수와 우미분계수가 다르므로 엄밀하게는 미분계수가 정의되지 않는다. 다만 이 경우는 앞서 언급했듯이 거의 없으므로, 실제로는 미분계수가 0 혹은 1이라고 해도 무방하다. 이와 유사하게 Leaky ReLU에서도 다음과 같이 도함수가 정의된다.
 
     $$
-    f_{Leaky ReLU}(z) = 
+    f_{Leaky\ ReLU}(z) = 
     \begin{cases}
     0.01z\ (z < 0)\\
     z\ (z \geq 0)\\
     \end{cases}
-    = max\{0, z\}\\
+    = max\{001z, z\}\\
     \ \\
-    \frac{d}{dz} f_{ReLU}(z) = 
+    \frac{d}{dz} f_{Leaky\ ReLU}(z) = 
     \begin{cases}
     0.01\ (z < 0)\\
     1\ (z \geq 0)\\
