@@ -12,6 +12,7 @@ mathjax: true
 > \
 > 요한복음 8:32
 
+신학 뿐만 아니라 수학, 논리학에서도 놀라울만큼 잘 들어맞는 문장.
 
 {:toc}
 
@@ -69,6 +70,7 @@ mathjax: true
 $P_1 \rightarrow P_2 \equiv \neg P_1 \lor P_2$ 이므로, $\neg (P_1 \rightarrow P_2) \equiv \neg(\neg P_1 \lor P_2)$ 이다. 그리고 드 모르간의 법칙에 의하여 $\neg(\neg P_1 \lor P_2) \equiv P_1 \land \neg P_2$ 이다. 한편, 앞서 설명한 조건문의 동치에 의해 $P_2 \rightarrow P_1 \equiv \neg P_2 \lor P_1$ 이 성립한다. $P_1 \land \neg P_2$ 와 $\neg P_2 \lor P_1$ 동치가 아니므로, 모순이 발생한다. 따라서 주어진 가정 $G$ 는 거짓임을 확인할 수 있다.
 
 한편, 이는 다음의 진리표를 이용해서도 쉽게 증명이 가능하다.
+
 |$P_1$|$P_2$|$P_1 \rightarrow P_2$|$\neg P_1 \lor P_2$|
 |:-:|:-:|:-:|:-:|
 |T|T|T|T|
@@ -106,3 +108,4 @@ $P_1 \rightarrow P_2 \equiv \neg P_1 \lor P_2$ 이므로, $\neg (P_1 \rightarrow
 ## 공리와 정리
 
 
+> [이전 포스트](https://sol1archive.github.io/note/math_logic101) | 
