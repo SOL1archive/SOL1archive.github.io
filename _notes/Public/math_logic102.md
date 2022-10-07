@@ -89,6 +89,14 @@ $P_1 \rightarrow P_2 \equiv \neg P_1 \lor P_2$ 이므로, $\neg (P_1 \rightarrow
 
 ### Fitch Format
 
+|    |      | | | | | | | |
+|-|-|-|-|-|-|-|-|-|
+|1 | $P\rightarrow Q$             | | | | | | 
+|2 | $(P\wedge S)\wedge R$        | | | | | | 
+| | | | | | | | | |
+|3 | $P\wedge S$                  | | | | | | 2 $\wedge Elim$
+|4 | $P$                          | | | | | | 3 $\wedge Elim$
+|5 | $Q$                          | | | | | | 1,4 $\rightarrow Elim$
 
 ### 추론 규칙
 
