@@ -1,5 +1,5 @@
 ---
-title: 머신러닝 노트(1)
+title: 머신러닝 노트(1-1)
 feed: show
 mathjax: true
 ---
@@ -89,4 +89,4 @@ $$
 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
 
-> [다음 포스트](https://sol1archive.github.io/note/step2) | 
+> [다음 포스트](https://sol1archive.github.io/note/step1-2) | 

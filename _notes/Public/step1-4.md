@@ -1,5 +1,5 @@
 ---
-title: 머신러닝 노트(4)
+title: 머신러닝 노트(1-4)
 feed: show
 mathjax: true
 ---
@@ -428,3 +428,7 @@ $$
 
 하지만 한편으로, 무작위로 가중치를 조정하다가 가중치의 값이 너무 커지게 되어도 문제가 발생한다. 가중치의 값이 커지면 활성화 함수에 대입되는 $Z^{[1]}$ 의 값도 커지게 되고, 시그모이드 함수와 $tanh$ 함수에 큰 값이 대입될 수 있게 된다. 이는 기울기의 소실로 이어지고, 다시 경사하강법을 이용한 학습 속도가 느려지는 원인이 된다. 그래서 가중치를 초기화 할때 충분히 작은 값을 곱해 이러한 문제를 막는다. 혹은 정규분포난수(난수의 분포가 정규분포인 난수)를 사용하기도 한다.
 
+> 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
+> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
+
+> [이전 포스트](https://sol1archive.github.io/note/step1-3) | [다음 포스트](https://sol1archive.github.io/note/step1-5) 

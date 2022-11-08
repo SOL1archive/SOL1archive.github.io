@@ -1,5 +1,5 @@
 ---
-title: 머신러닝 노트(3)
+title: 머신러닝 노트(1-3)
 feed: show
 mathjax: true
 ---
@@ -280,4 +280,4 @@ $$
 > 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
 > Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
 
-> [이전 포스트](https://sol1archive.github.io/note/step2) | [다음 포스트](https://sol1archive.github.io/note/step4) 
+> [이전 포스트](https://sol1archive.github.io/note/step1-2) | [다음 포스트](https://sol1archive.github.io/note/step1-3)
