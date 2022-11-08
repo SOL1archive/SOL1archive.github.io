@@ -9,7 +9,8 @@ mathjax: true
 {:#머신러닝 개요}
 ## 머신러닝 개요
 
-> 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
+> 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
+> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/playlist?list=PLkRLdi-c79HKEWoi4oryj-Cx-e47y_NcM)
 
 - AI는 전기가 세상을 바꾼 것처럼 세상을 바꿀 수 있을 것
 - 다양한 분야에 활용됨
