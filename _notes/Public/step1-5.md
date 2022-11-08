@@ -272,6 +272,6 @@ $$
 딥러닝과 인간의 뇌는 어느정도 연관이 있다. 딥러닝 아키텍처의 하나의 유닛은 생명체의 신경망의 뉴런과 기능이 거의 유사하다. 하나의 뉴런의 기능은 복잡하기 때문에 오늘날에도 거의 밝혀내지 못하고, 인간의 뇌가 학습할 때 역전파를 사용하는 지도 불분명하다. 따라서 뇌에 대한 비유는 적절하지 않은 경우가 많다. 하지만 딥러닝의 초기에는 인간의 뇌에서 많은 영감을 받았다.
 
 > 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
-> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
+> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/playlist?list=PLkRLdi-c79HKEWoi4oryj-Cx-e47y_NcM)
 
 > [이전 포스트](https://sol1archive.github.io/note/step1-4) | 

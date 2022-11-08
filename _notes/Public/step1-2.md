@@ -257,6 +257,6 @@ db /= m
 
 
 > 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
-> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
+> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/playlist?list=PLkRLdi-c79HKEWoi4oryj-Cx-e47y_NcM)
 
 > [이전 포스트](https://sol1archive.github.io/note/step1-1) | [다음 포스트](https://sol1archive.github.io/note/step1-3)

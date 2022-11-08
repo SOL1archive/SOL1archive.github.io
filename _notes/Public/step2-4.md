@@ -337,3 +337,6 @@ $$
 
 - 이산적 감쇠 방법
 - 수동 감쇠 방법: 1 Epoch에 걸리는 시간이 충분히 긴 경우에 주로 사용
+
+> 본 노트는 Andrew Ng의 머신러닝 수업을 정리한 것임. 
+> Andrew Ng, Machine learning lecture, [Youtube Link](https://www.youtube.com/playlist?list=PLkRLdi-c79HKEWoi4oryj-Cx-e47y_NcM)
