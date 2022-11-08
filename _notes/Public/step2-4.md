@@ -96,7 +96,7 @@ import numpy as np
 for t in range(5000):
     # Froward Prop. on X^{t} (벡터화된 구현)
     Z[0] = np.dot(W[1], X_mini[t]) + b[0]
-    A[0] g[0](Z[0])
+    A[0] = g[0](Z[0])
     '''
     중간 생략
     '''
