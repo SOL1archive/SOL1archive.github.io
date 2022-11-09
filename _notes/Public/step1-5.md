@@ -135,7 +135,8 @@ $$
 ## 행렬의 차원(크기)을 알맞게 하기
 심층 신경망 아키텍처를 구현할 때 각 행렬의 차원을 알맞게 하는 것은 중요하다. 그러므로 행렬의 차원을 확인할 필요가 있다. 딥러닝 아키텍처를 다시 살펴보자.
 
-![deep neural network](./deep%20neural%20network.png)
+
+<img src="../assets/img/deep%20neural%20network.png" width="100%">
 
 이때 각 층의 $n^{[l]}$ 은 다음과 같다.
 
