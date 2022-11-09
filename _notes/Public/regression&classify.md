@@ -1,6 +1,6 @@
 ---
 title: 지도학습 - 회귀와 분류 (1)
-feed: hide
+feed: show
 mathjax: true
 ---
 
@@ -8,9 +8,7 @@ mathjax: true
 
 지도학습 머신러닝을 통해 해결하는 두 가지 문제는 회귀(_Regression_)와 분류(_Classification_)이다. 전통적인 머신러닝 모델들인 선형회귀(_Linear Regression_), 서포트벡터머신(_SVM: Support Vector Machine_)을 Python 코드로 회귀와 분류 모델에 대해 알아보자. 
 
-<!-- >> Note1. 본 문서의 코드 중는 AWS 클라우드 머신러닝(아비섹 미쉬라, 박정현 옮김), 에이콘, 2021에서 제공하는 코드를 필요에 따라 수정한 것임. 소스코드에 대한 모든 권리는 표준 저작권법을 따름. -->
-
-> 본 포스트의 목적은 회귀와 분류에 대한 추상적 개념을 소개하는 것이므로, 세부적인 수학적 원리는 생략한다. 이는 추후 포스트에서 다룰 계획이며, 직관적이고 간략화된 수학적 원리와 더 자세한 머신러닝 원리를 알기 원하는 사람은 유튜버 3Blue1Brown의 [Neural Networks Series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)을 참고하면 좋다.
+> 본 포스트의 목적은 회귀와 분류에 대한 대략적 개념을 소개하는 것이므로, 세부적인 수학적 원리는 생략한다.  직관적이고 간략화된 수학적 원리와 더 자세한 머신러닝 원리를 알기 원하는 사람은 관련 자료 및 유튜버 3Blue1Brown의 [Neural Networks Series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)을 참고하면 좋다.
 
 
 {:#선형회귀}
@@ -95,9 +93,22 @@ for _ in range(repeat):
 
 ![](/assets/img/regression%26classify_md_4.png)
 
-이와 같은 커널트릭을 사용하면 3차원의 선형 형식인 평면의 방정식을 통해 분류 문제를 해결할 수 있다. 커널 트릭의 난이도는 높은 편이므로, 서포트벡터머신을 통해 분석하는 것이 더 수월하다.
+이와 같은 커널트릭을 사용하면 3차원의 선형인 평면의 방정식을 통해 분류 문제를 해결할 수 있다. 하지만 커널 트릭의 난이도는 높은 편이므로, 서포트벡터머신을 통해 분석하는 것이 더 수월하다.
 서포트벡터머신의 수학적 구현은 선형회귀와 달리 간략하지 않다. 하지만 scikit-learn 라이브러리를 활용하면 쉽게 구현할 수 있다. 
 
-다음 포스트에서는 로지스틱 회귀(_Logistic Regression_), 의사결정트리(_Decision Tree_)를 다룰 것이다.
+```python
+from sklearn.linear_model import SVR
+
+'''
+데이터 초기화 코드
+'''
+
+svr_model = SVR().fit(X_train, y_train)
+y_pred = svr_model.predict(X_test)
+```
+
+서포트 벡터 머신의 원리는 _마진(Margin)_ 을 최대화하는 데에 있다. 전체 데이터 집합 중 모델과 가장 가까운 데이터와 모델 사이의 거리를 마진이라고 한다. 이 마진을 최대화하는 방향으로 모델을 수정해나가면 가장 좋은 모델을 얻을 수 있음이 증명되었다. 서포트 벡터 머신은 이를 이용하여 마진을 증가시키는 방향으로 모델을 개선하고 딥러닝이 대두되기 전까지 일반적으로 가장 좋은 성능을 가지는 통계적 모델이었다.
+
+다음 포스트에서는 로지스틱 회귀(_Logistic Regression_), 의사결정트리(_Decision Tree_)를 다룰 것이다. 
 
 > 출처: AWS 클라우드 머신러닝(아비섹 미쉬라, 박정현 옮김), 에이콘, 2021
