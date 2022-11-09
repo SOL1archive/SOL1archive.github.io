@@ -8,7 +8,7 @@ mathjax: true
 
 지도학습 머신러닝을 통해 해결하는 두 가지 문제는 회귀(_Regression_)와 분류(_Classification_)이다. 전통적인 머신러닝 모델들인 선형회귀(_Linear Regression_), 서포트벡터머신(_SVM: Support Vector Machine_)을 Python 코드로 회귀와 분류 모델에 대해 알아보자. 
 
-> 본 포스트의 목적은 회귀와 분류에 대한 대략적 개념을 소개하는 것이므로, 세부적인 수학적 원리는 생략한다.  직관적이고 간략화된 수학적 원리와 더 자세한 머신러닝 원리를 알기 원하는 사람은 관련 자료 및 유튜버 3Blue1Brown의 [Neural Networks Series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)을 참고하면 좋다.
+> 본 포스트의 목적은 회귀와 분류에 대한 대략적 개념을 소개하는 것이므로, 세부적인 수학적 원리는 생략한다.  수학적 원리와 더 자세한 머신러닝 원리를 알기 원하는 사람은 관련 자료 및 유튜버 3Blue1Brown의 [Neural Networks Series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)을 참고하면 좋다.
 
 
 {:#선형회귀}
