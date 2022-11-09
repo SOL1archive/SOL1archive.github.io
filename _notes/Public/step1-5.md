@@ -85,13 +85,13 @@ $$
 
 이는 다음과 같이 시각적으로 표현할 수 있다.
 
-![propagation visualize](./propagation_viz.PNG)
+<img src="../assets/img/propagation_viz.PNG" width="100%">
 
 {:#심층신경망에서의 순방향전파}
 ## 심층신경망에서의 순방향전파
 다음과 같은 심층신경망에 대한 순방향전파를 살펴보자.
 
-![deep neural network](./deep%20neural%20network.png)
+<img src="../assets/img/deep%20neural%20network.png" width="100%">
 
 먼저 입력피처 $\mathbb{x}$ 에 대해, 은닉층의 연산은 다음과 같다. (입력층에 대한 인덱스를 제외한 연산이다.)
 
