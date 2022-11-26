@@ -5,6 +5,10 @@ mathjax: true
 toc: true
 ---
 
+> By relieving the brain of all unnecessary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases the mental power of the race. 
+> 
+> - Alfred North Whitehead
+
 > 훌륭한 표기법은 불필요한 작업에 신경 쓰지 않게 함으로써 더 어려운 문제에 집중하게 해주고, 결과적으로 정신력을 강화해준다. 
 >  
 > - 알프레드 노스 화이트헤드
