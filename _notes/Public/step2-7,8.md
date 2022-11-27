@@ -168,7 +168,7 @@ $$
 ## Tensorflow
 `Tensorflow`는 `PyTorch`와 함께 대표적인 머신러닝 프레임워크이다. `Tensorflow`의 장점을 확인하기 위해 비용함수 $J = w^2 - 10w + 25$ 를 해결해야 한다고 하자. `Tensorflow`가 이 문제를 어떻게 해결하는지 확인해보자.
 
-> Note. 다음 코드의 버전은 Lazy Evaluation이 기본으로 적용된 오래된 `1.x` 버전이고, Eager Execution이 적용된 `2.x` 버전에서는 작동하지 않음. 따라서 본 코드를 실행하고 싶다면 `Tensorflw` 버전을 `1.x`로 바꾸거나, 다음 방법을 따르면 좋다.
+> Note. 다음 코드의 버전은 Lazy Evaluation이 기본으로 적용된 오래된 `1.x` 버전이고, Eager Execution이 적용된 `2.x` 버전에서는 작동하지 않음. 따라서 본 코드를 실행하고 싶다면 `Tensorflow` 버전을 `1.x`로 바꾸거나, 다음 방법을 따르면 좋다.
 > 
 > 본 코드의 
 > ```python
