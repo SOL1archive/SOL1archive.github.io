@@ -7,18 +7,21 @@ date: 27-07-2022
 
 - 👋 Hi, I’m Subin Park, @SOL1archive.
 - I'm from Korea and I lived in the Philippines for about an year.
-- My Korean name is Subin Park and English name is Tom.
-
+- You can contact me via email any time!
 ### Contact
 email: enlightkorean@gmail.com   
 Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 
+# Career
+- TSMM(Text and Social Media Mining) Lab Research Internship, Yonsei Univ., Seoul, 09-01-2022 ~
+- CEO, Co-Founder, Kiron Co., Ltd., Korea
+
 # Interests
 ## Main Interests
 - I'm mainly interested in **Software Architecture**, **AI** and **Data Science**.
-- **Software Architecture** is an exact function of software. So the feature and performance of the software is basically based on **Software** **Architecture**.
+- **System Software** is a fundamental base of software. So the feature and performance of the software is basically based on **System Software**.
 ## Other Interests
-- In Computer Science and Informatics, I'm interested in **System Softwares**, **Information System/Science** and **Computational Biology**.
+- In Computer Science and Informatics, I'm interested in **System Softwares**, **Informatics** and **Computational Biology**.
 - In other fields, I'm interested in **Math** (**Mathematical logic**, **Algebra** especially), **Philosophy**, **Linguistics** and **neuroscience**.
 - I like to understand how things works, especially **computer system** and **human brain**.
 - Outside of the academic field, I'm interested in business models and competition for hegemony of companies such as Big-Tech Commpanies.
