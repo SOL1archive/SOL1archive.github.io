@@ -12,9 +12,6 @@ date: 27-07-2022
 email: enlightkorean@gmail.com   
 Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 
-# Career
-- CEO, Co-Founder, Kiron Co., Ltd., Korea
-
 # Interests
 ## Main Interests
 - I'm mainly interested in **Software Architecture**, **AI** and **Data Science**.
@@ -38,3 +35,6 @@ Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 # Schooling
 - Pyeongtaek High School
 - 1st year Undergrad - Library and Information Science - Yonsei University, Seoul, Korea
+
+## Career
+- CEO, Co-Founder, Kiron Co., Ltd., Korea
