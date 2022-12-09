@@ -4,6 +4,7 @@ feed: show
 mathjax: true
 ---
 
+* TOC
 {:toc}
 
 지도학습 머신러닝을 통해 해결하는 두 가지 문제는 회귀(_Regression_)와 분류(_Classification_)이다. 전통적인 머신러닝 모델들인 선형회귀(_Linear Regression_), 서포트벡터머신(_SVM: Support Vector Machine_)을 Python 코드로 회귀와 분류 모델에 대해 알아보자. 

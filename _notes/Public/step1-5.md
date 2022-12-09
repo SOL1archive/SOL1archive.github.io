@@ -4,6 +4,7 @@ feed: show
 mathjax: true
 ---
 
+* TOC
 {:toc}
 
 {:#더 많은 층의 심층 신경망(_Deep Neural Network_)}

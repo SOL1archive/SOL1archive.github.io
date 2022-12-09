@@ -4,6 +4,7 @@ feed: show
 mathjax: true
 ---
 
+* TOC
 {:toc}
 
 {:#미니배치(_mini-batch_) 경사하강법}
