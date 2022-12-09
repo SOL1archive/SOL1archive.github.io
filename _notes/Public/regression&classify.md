@@ -2,6 +2,7 @@
 title: 지도학습 - 회귀와 분류 (1)
 feed: show
 mathjax: true
+toc: true
 ---
 
 * TOC

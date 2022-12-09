@@ -2,6 +2,7 @@
 title: 머신러닝 노트(2-3)
 feed: show
 mathjax: true
+toc: true
 ---
 
 * TOC

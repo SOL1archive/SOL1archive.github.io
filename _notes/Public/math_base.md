@@ -2,10 +2,10 @@
 title: 머신러닝의 수학적 구현
 feed: show
 mathjax: true
-
+toc: true
 ---
 
-* 목차
+* TOC
 {:toc}
 
 {:#뉴런의 모델링}

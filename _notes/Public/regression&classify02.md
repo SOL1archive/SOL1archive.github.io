@@ -2,6 +2,7 @@
 title: 지도학습 - 회귀와 분류
 feed: hide
 mathjax: true
+toc: true
 ---
 
 ## 로지스틱 회귀

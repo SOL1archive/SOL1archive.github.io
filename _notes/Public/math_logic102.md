@@ -2,6 +2,7 @@
 title: 수리논리학 - 1차 술어 논리 (2)
 feed: show
 mathjax: true
+toc: true
 ---
 
 * TOC

@@ -2,6 +2,7 @@
 title: 수리논리학 - 1차 술어 논리 (3)
 feed: hide
 mathjax: true
+toc: true
 ---
 
 ### 추론 규칙

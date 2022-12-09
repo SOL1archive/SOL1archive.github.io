@@ -2,6 +2,7 @@
 title: 머신러닝 노트(1-4)
 feed: show
 mathjax: true
+toc: true
 ---
 
 {:#신경망 네트워크(_Neural Network_)}
