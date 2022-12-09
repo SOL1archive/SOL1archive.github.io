@@ -4,7 +4,6 @@ feed: show
 mathjax: true
 ---
 
-
 * TOC
 {:toc}
 
