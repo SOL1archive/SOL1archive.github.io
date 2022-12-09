@@ -13,7 +13,6 @@ email: enlightkorean@gmail.com
 Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 
 # Career
-- TSMM(Text and Social Media Mining) Lab Research Internship, Yonsei Univ., Seoul, 09-01-2022 ~
 - CEO, Co-Founder, Kiron Co., Ltd., Korea
 
 # Interests
