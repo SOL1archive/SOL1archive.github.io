@@ -98,7 +98,7 @@ $$
     \text{BN}: & \ 
     \left(
     \begin{aligned}
-        z^{[1]}_{norm} &= \frac{z^{[1]} - \mu^{[1]}}{\sqrt{{(\sigma^{[1]})}^2 + \epsilon}}\\
+        z^{[1]}_{norm} &= \frac{z^{[1]} - \mu^{[1]}}{\sqrt{{(\sigma ^{[1]})}^2 + \epsilon}}\\
         {\tilde z}^{[1]} &= \gamma ^{[1]} z^{[1]}_{norm} + \beta ^{[1]}\\
     \end{aligned} \right. \\
     & \phantom{aaaa} a^{[1]} = g^{[1]} \left({\tilde z}^{[1]} \right)\\
@@ -107,7 +107,7 @@ $$
     \text{BN}:&\ 
     \left(
     \begin{aligned}
-        z^{[2]}_{norm} &= \frac{z^{[2]} - \mu^{[2]}}{\sqrt{{(\sigma^{[2]})}^2 + \epsilon}}\\
+        z^{[2]}_{norm} &= \frac{z^{[2]} - \mu^{[2]}}{\sqrt{{(\sigma ^{[2]})}^2 + \epsilon}}\\
         {\tilde z}^{[2]} &= \gamma ^{[2]} z^{[2]}_{norm} + \beta ^{[2]}\\
     \end{aligned} \right. \\
     & \phantom{aaaa} a^{[2]} = g^{[2]} \left({\tilde z}^{[2]} \right)\\
@@ -116,7 +116,7 @@ $$
     \text{BN}:&\ 
     \left(
     \begin{aligned}
-        z^{[2]}_{norm} &= \frac{z^{[2]} - \mu^{[1]}}{\sqrt{{(\sigma^{[2]})}^2 + \epsilon}}\\
+        z^{[2]}_{norm} &= \frac{z^{[2]} - \mu^{[1]}}{\sqrt{{(\sigma ^{[2]})}^2 + \epsilon}}\\
         {\tilde z}^{[2]} &= \gamma ^{[2]} z^{[2]}_{norm} + \beta ^{[2]}\\
     \end{aligned} \right. \\
     & \phantom{aaaa} a^{[3]} = g^{[3]} \left({\tilde z}^{[3]} \right)\\
