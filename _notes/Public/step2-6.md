@@ -1,5 +1,5 @@
 ---
-title: 머신러닝 노트(2-7,8)
+title: 머신러닝 노트(2-6)
 feed: show
 mathjax: true
 toc: true
