@@ -149,7 +149,7 @@ $$
     \text{BN}: & \ 
     \left(
     \begin{aligned}
-        z^{[l]}_{norm} &= \frac{z^{[l]} - \mu^{[l]}}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}}\\
+        z^{[l]}_{norm} &= \frac{z^{[l]} - \mu^{[l]}}{\sqrt{(\sigma^{[l]})^2 + \epsilon}}\\
         {\tilde z}^{[l]} &= \gamma ^{[l]} z^{[l]}_{norm} + \beta ^{[l]}\\
     \end{aligned} \right. \\
     & \phantom{aaaa} a^{[l]} = g^{[l]} \left({\tilde z}^{[l]} \right)\\
@@ -162,19 +162,19 @@ $$
 \begin{array}{ll}
 \begin{aligned}
     z^{[l]} &= W^{[l]\ T}\ X + b^{[l]}\\
-    z^{[l]}_{norm} &= \frac{W^{[l]\ T}\ X + b^{[l]} - \mu^{[l]}}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}} = \frac{W^{[l]\ T}\ X}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}} + \frac{b^{[l]} - \mu^{[l]}}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}}\\
-    {\tilde z}^{[l]} &= \gamma ^{[l]} \frac{W^{[l]\ T}\ X}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}} + \gamma ^{[l]} \frac{b^{[l]} - \mu^{[l]}}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}} + \beta ^{[l]}\\
+    z^{[l]}_{norm} &= \frac{W^{[l]\ T}\ X + b^{[l]} - \mu^{[l]}}{\sqrt{(\sigma^{[l]})^2 + \epsilon}} = \frac{W^{[l]\ T}\ X}{\sqrt{(\sigma^{[l]})^2 + \epsilon}} + \frac{b^{[l]} - \mu^{[l]}}{\sqrt{(\sigma^{[l]})^2 + \epsilon}}\\
+    {\tilde z}^{[l]} &= \gamma ^{[l]} \frac{W^{[l]\ T}\ X}{\sqrt{(\sigma^{[l]})^2 + \epsilon}} + \gamma ^{[l]} \frac{b^{[l]} - \mu^{[l]}}{\sqrt{(\sigma^{[l]})^2 + \epsilon}} + \beta ^{[l]}\\
 \end{aligned}\\
 &\blacksquare
 \end{array}
 $$
 
-세번째 식을 자세히 살펴보면 $\gamma ^{[l]} \frac{b^{[l]} - \mu^{[l]}}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}} + \beta ^{[l]}$ 이 하나의 상수로 묶임을 확인할 수 있다. 따라서 딥러닝의 연산을 다음과 같다고 보고 연산할 수 있는 것이다.
+세번째 식을 자세히 살펴보면 $\gamma ^{[l]} \frac{b^{[l]} - \mu^{[l]}}{\sqrt{(\sigma^{[l]})^2 + \epsilon}} + \beta ^{[l]}$ 이 하나의 상수로 묶임을 확인할 수 있다. 따라서 딥러닝의 연산을 다음과 같다고 보고 연산할 수 있는 것이다.
 
 $$
 \begin{aligned}
     z^{[l]} &= W^{[l]\ T}\ X\\
-    z^{[l]}_{norm} &= \frac{z^{[l]} - \mu^{[l]}}{\sqrt{{(\sigma^{[l]})}^2 + \epsilon}}\\
+    z^{[l]}_{norm} &= \frac{z^{[l]} - \mu^{[l]}}{\sqrt{(\sigma^{[l]})^2 + \epsilon}}\\
     {\tilde z}^{[l]} &= \gamma ^{[l]} z^{[l]}_{norm} + \beta ^{[l]}\\
      \\
     a^{[l]} &= g^{[l]} \left({\tilde z}^{[l]} \right)\\
