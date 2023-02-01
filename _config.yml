@@ -46,7 +46,7 @@ preferences:
   wiki_style_link: 
     enabled: true
   pagepreview: 
-    enabled: true
+    enabled: false
   backlinks:
     enabled: true
 # To enable a homepage, change the value to true and add content to _includes/Homepage.html
@@ -88,7 +88,7 @@ defaults:
       type: posts
     values:
       layout: Post
-      permalink: /post/:title
+      permalink: "/post/:title"
       content-type: post
   - scope:
       path: ""
