@@ -2,7 +2,6 @@
 title: 가산과 비가산, 그리고 무한
 feed: show
 mathjax: true
-date: 02-02-2023
 toc: true
 ---
 
@@ -26,10 +25,10 @@ toc: true
 가산 집합은 셀 수 있는 집합을, 비가산 집합은 셀 수 없는 집합을 의미한다. 가산과 비가산 집합의 차이를 이해하기 위해 자연수 집합, 정수 집합, 유리수 집합, 실수 집합이 각각 가산 집합인지 비가산 집합인지 확인해보자. 이를 위해선 보다 수학적으로 가산 집합을 정의할 필요가 있다. 우리는 무언가를 셀 때 세는 대상에 하나, 둘, 셋, 넷 등 자연수를 할당해 가면서 센다. 그러므로 집합을 구성하는 모든 원소에 자연수를 대응시킬 수 있으면 셀 수 있는 것이고, 대응시킬 수 없으면 셀 수 없는 것이다. 가산 집합을 자연수 집합을 치역으로 일대일 함수(단사, _onto_)가 정의될 수 있는 집합, 비가산 집합은 일대일 함수가 정의되지 않는 집합이라고 정의해보자. 이를 표현하면 다음과 같다.
 
 $$
-S: \text{countable}\ \Leftrightarrow \ \exist\ f \ \ \text{s.t}\ \ f:S \to^{\text{onto}} \mathbb{N}
+S: \text{countable}\ \Leftrightarrow \ \exists\ f \ \ \text{s.t}\ \ f:S \to^{\text{onto}} \mathbb{N}
 $$
 
-$\mathbb{N}$ 은 자연수 집합을 가리키는 기호이다. 이와 같은 기호로 정수 집합 기호인 $\mathbb{Z}$ , 유리수 집합 기호인 $\mathbb{Q}$ , 실수 집합 기호인 $\mathbb{R}$ 이 있다. $\mathbb{N}$ 은 자연수의 영어 머릿글자 **N**atural Number에서 따왔고, $\mathbb{Z}$ 는 독일어 **Z**ahlen에서 따왔으며, $\mathbb{Q}$ 는 몫을 의미하는 영단어 **Q**uotient에서 따왔다. $\mathbb{R}$ 은 영어 **R**eal Number에서 따왔다. $\exist$ 는 존재한다는 뜻이고, $\text{s.t.}$ 은 such that, 어떠한 이라는 의미다. 그리고 $\to^{\text{onto}}$  는 단사함수라는 의미다.
+$\mathbb{N}$ 은 자연수 집합을 가리키는 기호이다. 이와 같은 기호로 정수 집합 기호인 $\mathbb{Z}$ , 유리수 집합 기호인 $\mathbb{Q}$ , 실수 집합 기호인 $\mathbb{R}$ 이 있다. $\mathbb{N}$ 은 자연수의 영어 머릿글자 **N**atural Number에서 따왔고, $\mathbb{Z}$ 는 독일어 **Z**ahlen에서 따왔으며, $\mathbb{Q}$ 는 몫을 의미하는 영단어 **Q**uotient에서 따왔다. $\mathbb{R}$ 은 영어 **R**eal Number에서 따왔다. $\exists$ 는 존재한다는 뜻이고, $\text{s.t.}$ 은 such that, 어떠한 이라는 의미다. 그리고 $\to^{\text{onto}}$  는 단사함수라는 의미다.
 
 이제 본격적으로 가산집합의 정의를 따라 여러 수 집합들이 가산 집합인지 비가산 집합인지 확인해보자. 우선 자연수 집합은 가산 집합임이 확실하다. 모든 자연수에 대해 자연수를 다음과 같이 대응할 수 있기 때문이다.
 
@@ -68,7 +67,7 @@ $$
 
 $$
 \begin{array}{ll}
-\exist f_{\mathbb{Z}} \ \text{s.t.} f_{\mathbb{Z}}: \mathbb{Z} \to^{\text{onto}} \mathbb{N}\\
+\exists f_{\mathbb{Z}} \ \text{s.t.} f_{\mathbb{Z}}: \mathbb{Z} \to^{\text{onto}} \mathbb{N}\\
 \therefore \mathbb{Z}: \text{countable}\\
 & \blacksquare
 \end{array}
@@ -142,7 +141,7 @@ $$
 $$
 \begin{array}{ll}
 f_{\mathbb{Q}} = f_{\mathbb{Z}} \circ f_{\mathbb{Z},\ {\mathbb{Q}}}\\
-\exist f_{\mathbb{Q}} \ \text{s.t.} f_{\mathbb{Q}}: \mathbb{Q} \to^{\text{onto}} \mathbb{N}\\
+\exists f_{\mathbb{Q}} \ \text{s.t.} f_{\mathbb{Q}}: \mathbb{Q} \to^{\text{onto}} \mathbb{N}\\
 \ \\
 \therefore \mathbb{Q}: \text{countable}\\
 & \blacksquare
@@ -162,12 +161,12 @@ $$
 \begin{array}{ll}
 \text{Let\ } \mathbb{R}: \text{countable}\\
 \Rightarrow \ [0, 1]:  \text{countable}\\
-\Rightarrow \ \exist f: \mathbb{[0, 1]} \to^{onto} \mathbb{N} \ \text{s.t.}\ f(0) = 1\\
-\Rightarrow \ \exist \epsilon \ \text{s.t.}\ f(\epsilon) = 1\\
+\Rightarrow \ \exists f: \mathbb{[0, 1]} \to^{onto} \mathbb{N} \ \text{s.t.}\ f(0) = 1\\
+\Rightarrow \ \exists \epsilon \ \text{s.t.}\ f(\epsilon) = 1\\
 \Rightarrow \ \emptyset = (0, \epsilon)\\
 \frac{\epsilon}{2}, \frac{\epsilon}{3} \in (0, \epsilon)\\
 \therefore \ \perp\\
-\text{By\ Proof\ by\ Contradiction,\ a.k.a\ } \perp \text{Elim,}\\
+\text{By Proof by Contradiction, a.k.a } \perp \text{Elim,}\\
 \neg \mathbb{R}: countable \Leftrightarrow \mathbb{R}: uncountable\\
 &\blacksquare
 \end{array}
