@@ -1,7 +1,7 @@
 ---
 title: My Profile
 feed: show
-date: 27-07-2022
+date: 01-07-2022
 mathjax: true
 ---
 
