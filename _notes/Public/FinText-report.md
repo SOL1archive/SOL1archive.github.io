@@ -1,6 +1,6 @@
 ---
 title: "프로젝트 결산: 자연어 처리 모델 기반 금융상품 변동성 예측"
-date: 02-01-2023
+date: 01-02-2023
 mathjax: true
 feed: show
 ---
