@@ -86,7 +86,7 @@ $$
 a \in \mathbb{Q} \Leftrightarrow a = \frac{q}{p}\ (p,\ q \in \mathbb{Z})
 $$
 
-그리고 다르게 표현하면 다음과 같이 표현할 수 있다.
+그리고 이는 다음과 같이 다르게 표현할 수 있다.
 
 
 $$
