@@ -85,6 +85,7 @@ $$
 $$
 a \in \mathbb{Q} \Leftrightarrow a = \frac{q}{p}\ (p,\ q \in \mathbb{Z})
 $$
+
 그리고 다르게 표현하면 다음과 같이 표현할 수 있다.
 
 
@@ -160,7 +161,7 @@ $$
 
 $$
 \begin{array}{ll}
-\text{Let\ } \mathbb{R}: \text{countable}\\
+\text{Let } \mathbb{R}: \text{countable}\\
 \Rightarrow \ [0, 1]:  \text{countable}\\
 \Rightarrow \ \exists f: \mathbb{[0, 1]} \to^{onto} \mathbb{N} \ \text{s.t.}\ f(0) = 1\\
 \Rightarrow \ \exists \epsilon \ \text{s.t.}\ f(\epsilon) = 1\\
