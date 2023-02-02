@@ -1,8 +1,8 @@
 ---
 title: My Profile
 feed: show
-mathjax: true
 date: 27-07-2022
+mathjax: true
 ---
 
 - 👋 Hi, I’m Subin Park, @SOL1archive.

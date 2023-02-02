@@ -1,6 +1,7 @@
 ---
 title: 수리논리학 - 1차 술어 논리 (3)
 feed: hide
+date: 03-09-2022
 mathjax: true
 toc: true
 ---

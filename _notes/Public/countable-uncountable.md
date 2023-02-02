@@ -1,7 +1,7 @@
 ---
 title: 가산과 비가산, 그리고 무한
 feed: show
-date: 11-05-2021
+date: 02-02-2023
 mathjax: true
 toc: true
 ---

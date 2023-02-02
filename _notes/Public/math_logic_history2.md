@@ -1,6 +1,7 @@
 ---
 title: 수리논리학의 기초 - 논리학의 역사 (2)
 feed: hide
+date: 28-08-2022
 mathjax: true
 toc: true
 ---

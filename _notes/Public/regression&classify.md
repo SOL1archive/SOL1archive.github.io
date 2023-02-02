@@ -1,6 +1,7 @@
 ---
 title: 지도학습 - 회귀와 분류 (1)
 feed: show
+date: 05-09-2022
 mathjax: true
 toc: true
 ---

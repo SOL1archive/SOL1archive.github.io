@@ -1,6 +1,7 @@
 ---
 title: 머신러닝의 수학적 구현
 feed: show
+date: 06-07-2022
 mathjax: true
 toc: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: 머신러닝 노트(1-1)
 feed: show
+date: 01-10-2022
 mathjax: true
 toc: true
 ---
