@@ -166,6 +166,7 @@ $$
 \Rightarrow \ \emptyset = (0, \epsilon)\\
 \frac{\epsilon}{2}, \frac{\epsilon}{3} \in (0, \epsilon)\\
 \therefore \ \perp\\
+\ \\
 \text{By Proof by Contradiction, a.k.a } \perp \text{Elim,}\\
 \neg \mathbb{R}: \text{countable} \Leftrightarrow \mathbb{R}: \text{uncountable}\\
 &\blacksquare
