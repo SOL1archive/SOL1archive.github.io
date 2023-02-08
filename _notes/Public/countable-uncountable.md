@@ -58,7 +58,7 @@ f_{\mathbb{Z}} &=
 &=
 \begin{cases}
 2 x + 1&\text{if}\ x > 0\\
-2 \lvert x \rvert&\text{if}\ x \leq 0
+- 2 x &\text{if}\ x \leq 0
 \end{cases}
 \end{aligned}
 $$
@@ -83,7 +83,7 @@ $$
 
 
 $$
-a \in \mathbb{Q} \Leftrightarrow a = \frac{q}{p}\ (p,\ q \in \mathbb{Z})
+a \in \mathbb{Q} \Leftrightarrow a = \frac{q}{p}\ (p,\ q \in \mathbb{Z},\ p \ne 0)
 $$
 
 그리고 이는 다음과 같이 다르게 표현할 수 있다.
@@ -103,7 +103,7 @@ $$
 
 
 
-꼴로 만드는 것이 우리의 목표이다. 어떻게 해야 할까? 우리는 앞서 $a$ 를 $(p, q)$ 에 대응시킬 수 있음을 확인했다. $a (a > 0)$ 를 일사분면 위 정수 격자점 상의 임의의 점으로 대응시킬 수 있다는 뜻이다. 임의의 정수 격자점에 대해 (1, 1)은 1, (1, 2)는 2, (2, 1)은 3, (1, 3)은 4 와 같은 방식으로 대응시킬 수 있다. 한번 머릿속으로 상상해보면 가능하다는 것을 알 수 있다. 이 $y$ 방향으로 변화하는 변수를 $l$ , 대각선 방향으로 변화하는 값을 $s$ 로 일반화하여 표현하면 다음과 같다.
+꼴로 만드는 것이 우리의 목표이다. 어떻게 해야 할까? 우리는 앞서 $a$ 를 $(p, q)$ 에 대응시킬 수 있음을 확인했다. $a (a > 0)$ 를 일사분면 위 정수 격자점 상의 임의의 점으로 대응시킬 수 있다는 뜻이다. 임의의 정수 격자점에 대해 (1, 1)은 1, (1, 2)는 2, (2, 1)은 3, (1, 3)은 4 와 같은 방식으로 대응시킬 수 있다. 한번 머릿속으로 상상해보면 가능하다는 것을 알 수 있다. 이 $y$ 방향으로 변화하는 변수를 $l$ , 대각선 방향으로 변화하는 값을 $s$ 로 일반화하여 표현해보자.
 
 
 $$
@@ -130,9 +130,9 @@ $$
 $$
 f_{\mathbb{Z},\ {\mathbb{Q}}}(a) = 
 \begin{cases}
-\frac{1}{2}(p + q)^2 + \frac{3}{2}p + \frac{1}{2}q\ (a = \frac{q}{p})\ \text{if}\ a > 0\\
-0\ \text{if}\ a = 0\\
--\frac{1}{2}(p + q)^2 - \frac{3}{2}p - \frac{1}{2}q\ (a = -\frac{q}{p})\ \text{if}\ a < 0\\
+\frac{1}{2}(p + q)^2 + \frac{3}{2}p + \frac{1}{2}q\ (a = \frac{q}{p})\ &\text{if}\ a > 0\\
+0\ &\text{if}\ a = 0\\
+-\frac{1}{2}(p + q)^2 - \frac{3}{2}p - \frac{1}{2}q\ (a = -\frac{q}{p})\ &\text{if}\ a < 0\\
 \end{cases}
 $$
 
@@ -152,9 +152,7 @@ $$
 
 {:#실수}
 ## 실수
-이제 실수 집합만 남았다. 과연 실수집합은 가산일까? 한번 실수 집합을 가산이라고 가정해보자. 실수 집합은 가산 집합이므로 구간 $[0, 1], (0, 1)$ 도 가산일 것이다. 한번 0을 자연수 1에 대응시켜보자. 그러면 0 다음 수인 어떤 수 $\epsilon \in (0, 1)$ 은 1에 대응시킬 수 있을 것이다. 그리고 이 사이(0과 $\epsilon$ 사이)에는 아무런 수가 없어야 한다. 하지만 0과 $\epsilon$ 사이에는 $\frac{\epsilon}{2}, \frac{\epsilon}{3}$ 등 많은 수가 있다. 어떤 $(0,1)$ 의 원소를 선택하든 항상 0과 그 원소 사이에는 수많은 수가 존재한다. 이는 모순이므로 실수 집합은 가산이 아닌 집합, 즉 비가산 집합이다.
-
-
+이제 실수 집합만 남았다. 과연 실수집합은 가산일까? 한번 실수 집합을 가산이라고 가정해보자. 실수 집합은 가산 집합이므로 구간 $[0, 1], (0, 1)$ 도 가산일 것이다. 한번 0을 자연수 1에 대응시켜보자. 그러면 0 다음 수인 어떤 수 $\epsilon \in (0, 1)$ 은 1에 대응시킬 수 있을 것이다. 그리고 이 사이(0과 $\epsilon$ 사이)에는 아무런 수가 없어야 한다. 하지만 0과 $\epsilon$ 사이에는 $\frac{\epsilon}{2}, \frac{\epsilon}{3}$ 등 많은 수가 있다. 어떤 $(0,1)$ 의 원소를 선택하든 항상 0과 그 원소 사이에는 수많은 수가 존재한다. 이는 모순이므로 귀류법에 의해 실수 집합은 가산이 아닌 집합, 즉 비가산 집합임을 확인할 수 있다.
 
 이 흐름을 수리논리를 통해 다음과 같이 정리할 수 있다.
 
@@ -163,8 +161,8 @@ $$
 \begin{array}{ll}
 \text{Let } \mathbb{R}: \text{countable}\\
 \Rightarrow \ [0, 1]:  \text{countable}\\
-\Rightarrow \ \exists f: \mathbb{[0, 1]} \to^{onto} \mathbb{N} \ \text{s.t.}\ f(0) = 1\\
-\Rightarrow \ \exists \epsilon \ \text{s.t.}\ f(\epsilon) = 1\\
+\Rightarrow \ \exists f: \mathbb{[0, 1]} \to^{onto} \mathbb{N} \ \text{s.t.}\ f(0) = 1,\ f: \text{increase}\\
+\Rightarrow \ \exists \epsilon \ \text{s.t.}\ f(\epsilon) = 2\\
 \Rightarrow \ \emptyset = (0, \epsilon)\\
 \frac{\epsilon}{2}, \frac{\epsilon}{3} \in (0, \epsilon)\\
 \therefore \ \perp\\
