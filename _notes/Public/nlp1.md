@@ -1,5 +1,5 @@
 ---
-title: 지도학습 - 회귀와 분류
+title: 자연어처리 노트(1)
 feed: show
 date: 03-02-2023
 mathjax: true
