@@ -6,6 +6,9 @@ mathjax: true
 toc: true
 ---
 
+* TOC
+{:toc}
+
 {:#RNN(_Recurent Neural Network_)}
 ## RNN(_Recurent Neural Network_)
 
