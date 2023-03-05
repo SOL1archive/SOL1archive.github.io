@@ -40,7 +40,7 @@ Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 
 # Schooling
 - Pyeongtaek High School
-- 1st year Undergrad - Library and Information Science - Yonsei University, Seoul, Korea
+- 2nd year Undergrad - Library and Information Science - Yonsei University, Seoul, Korea
 
 ## Career
 - CEO, Co-Founder, Kiron Co., Ltd., Korea
