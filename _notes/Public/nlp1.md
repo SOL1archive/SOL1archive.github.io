@@ -94,7 +94,7 @@ W
 h_{t - 1}\\
 x_t
 \end{bmatrix}
-+ \bold{b}
++ \mathbf{b}
 \right)
 \\
 \begin{aligned}
@@ -108,12 +108,12 @@ $$
 \begin{bmatrix}
 h_{t - 1}\\
 x_t\end{bmatrix}
-$ 는 벡터 $h_{t - 1}, x_t$ 를 concat한 벡터이다. 따라서 벡터의 크기는 두 벡터의 크기를 합한 값과 같다. 가령 두 벡터의 크기가 모두 $d$ 일 때 가중치 행렬 $W$ 와 편향 벡터 $\bold{b}$ 의 크기와 연산 과정은 다음과 같다.
+$ 는 벡터 $h_{t - 1}, x_t$ 를 concat한 벡터이다. 따라서 벡터의 크기는 두 벡터의 크기를 합한 값과 같다. 가령 두 벡터의 크기가 모두 $d$ 일 때 가중치 행렬 $W$ 와 편향 벡터 $\mathbf{b}$ 의 크기와 연산 과정은 다음과 같다.
 
 $$
 \begin{aligned}
 W &: 4d \times 2d\\
-\bold{b} &: 4d \times 1
+\mathbf{b} &: 4d \times 1
 \end{aligned}
 $$
 
@@ -136,10 +136,10 @@ tanh\\
 
 $$
 \begin{aligned}
-i_t &= \sigma \left(W_i \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \bold{b} _i \right)\\
-f_t &= \sigma \left(W_f \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \bold{b} _f \right)\\
-o_t &= \sigma \left(W_o \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \bold{b} _o \right)\\
-g_t &= tanh \left(W_g \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \bold{b} _g \right)\\
+i_t &= \sigma \left(W_i \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \mathbf{b} _i \right)\\
+f_t &= \sigma \left(W_f \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \mathbf{b} _f \right)\\
+o_t &= \sigma \left(W_o \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \mathbf{b} _o \right)\\
+g_t &= tanh \left(W_g \cdot \begin{bmatrix} h_{t - 1}\\ x_t \end{bmatrix} + \mathbf{b} _g \right)\\
 \end{aligned}
 $$
 
