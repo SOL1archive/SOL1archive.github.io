@@ -55,7 +55,7 @@ $$
 ## Backpropagtion through time and Long-Term-Dependency
 RNN의 학습은 Backpropagtion through time and Long-Term-Dependency을 통해 그라디언트를 구하여 이루어진다. RNN의 모델의 순방향 전파를 통해 얻은 예측값과 Ground Truth 데이터를 이용해 비용 함수를 정의할 수 있다. 
 
-기본 RNN의 문제는 여기서 발생한다. 학습 계산 그래프 상에서 더 이전 time step으로 갈수록 파라미터가 [감소(_Gradient Vanishing_)하거나 증가(_Gradient Explosion_)](./step2-3.md)한다.
+기본 RNN의 문제는 여기서 발생한다. 학습 계산 그래프 상에서 더 이전 time step으로 갈수록 파라미터가 [감소(_Gradient Vanishing_)하거나 증가(_Gradient Explosion_)](./step2-3)한다.
 
 {:#LSTM(_Long Short-Term Memory), GRU(_Gated Recurrent Unit_)}
 ## LSTM(_Long Short-Term Memory), GRU(_Gated Recurrent Unit_)
