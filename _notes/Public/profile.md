@@ -30,7 +30,8 @@ Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 # Goal
 - I want to be **AI Researcher**, **Business/Solution Architect** or **Data Scientist**. 
 ## AI Researcher
-- As an **AI RS**, I want to apply Humanitas(Logics, Linguistics, Psychology) and Neuroscience into AI.
+- Since "Can Machines Think?" is one of my biggest question, I want to be **AI Researcher** and implement the core mechanism of intelligence and thought.
+- As an **AI Researcher**, I want to apply Humanitas(Logics, Linguistics, Psychology) and Neuroscience into AI.
 - Since AI is an imitation of natural intelligence, humanitas about human and neuroscience will be make significant progress.
 ## Business/Solution Architect
 - A good **business/solution architect** must have insight in both businesses and Software field. Since I'm interested in both business and softwares, I believe I can be a good **business/solution architect**.
