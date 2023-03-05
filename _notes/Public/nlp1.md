@@ -71,8 +71,8 @@ $$
 
 - $i$ : Input Gate, 셀 상태 벡터에 데이터를 저장할지 결정하는 게이트
 - $f$ : Forgot Gate, 셀 상태 벡터에 데이터를 삭제할지 결정하는 게이트
-- $o$ : Output Gate, 얼마나 셀
-- $g$ : Gate
+- $o$ : Output Gate, 현재 time step의 정보를 셀 상태 벡터에 얼마나 더할지 결정하는 게이트
+- $g$ : Gate Gate, 현재 time step의 정보를 담고있는 게이트
 
 $$
 \begin{gathered}
