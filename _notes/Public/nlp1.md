@@ -58,7 +58,7 @@ RNN의 학습은 Backpropagtion through time and Long-Term-Dependency을 통해 
 기본 RNN의 문제는 여기서 발생한다. 학습 계산 그래프 상에서 더 이전 time step으로 갈수록 파라미터가 [감소(_Gradient Vanishing_)하거나 증가(_Gradient Explosion_)](./step2-3)한다.
 
 {:#LSTM(_Long Short-Term Memory)}
-## LSTM(_Long Short-Term Memory)
+## LSTM(_Long Short-Term Memory_)
 LSTM, GRU는 바닐라 RNN의 문제를 개선했다. LSTM의 구현은 다음과 같다.
 
 $$
