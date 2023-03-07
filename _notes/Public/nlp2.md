@@ -95,7 +95,7 @@ $$
 \text{For given length T,}\\
 \ \\
 \begin{aligned}
-P(y \mid x) &= P(y_1 \mid  x)P(y_2 \mid  y_1, x)P(y_3 \mid  y_2, y_1, x) \cdots P(y_T \mid  y_{T - 1}, \cdots , P_1, x)\\
+P(y \mid x) &= P(y_1 \mid x)P(y_2 \mid y_1, x)P(y_3 \mid y_2, y_1, x) \cdots P(y_T \mid y_{T - 1}, \cdots , P_1, x)\\
 &= \prod_{i = 1}^T P(y_i\mid y_{i - 1}, y_{i - 2}, \cdots, y_1, x)
 \end{aligned}
 \end{array}
@@ -109,8 +109,8 @@ $$
 
 $$
 \begin{aligned}
-\text{score} (y_1, \cdots, y_t) &= \frac{log\ P_{LM}(y \mid  x)}{t}\\
-&= \frac{\sum\limits_{i = 1}^t log\ P_{LM}(y_i \mid  y_{i - 1}, \cdots, y_1, x)}{t}
+\text{score} (y_1, \cdots, y_t) &= \frac{log\ P_{LM}(y \mid x)}{t}\\
+&= \frac{\sum\limits_{i = 1}^t log\ P_{LM}(y_i \mid y_{i - 1}, \cdots, y_1, x)}{t}
 \end{aligned}
 $$
 
@@ -177,5 +177,4 @@ Predicted: 나는 이 영화를 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 그리고 BLEU의 식에서 산술평균이나 조화평균이 아닌 기하평균을 사용함을 확인할 수 있다. 기하평균을 사용한 이유는 조화평균 <= 기하평균 <= 산술평균이기 때문에 기하평균을 일반적으로 Metric으로 얻기에 좋은 값을 얻을 수 있기 때문이다.
 
-
-> [이전 포스트](./nlp1) \mid 
+> [이전 포스트](./nlp1) | 
