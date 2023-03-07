@@ -1,7 +1,7 @@
 ---
-title: 자연어처리 노트(2)
+title: 자연어처리 노트(1)
 feed: show
-date: 03-03-2023
+date: 03-02-2023
 mathjax: true
 toc: true
 ---
