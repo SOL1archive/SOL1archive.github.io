@@ -171,3 +171,5 @@ $$
 GRU의 구조는 LSTM과 유사하지만 LSTM보다 파라미터 수가 더 적어 가볍고 학습이 빠르다. GRU는 LSTM과 달리 이전 상태 벡터로 은닉 상태 벡터(_Hidden State Vector_)만을 갖는다. GRU의 은닉 상태 벡터는 LSTM의 셀 상태 벡터와 유사한 역할을 한다. 은닉 상태 벡터 $h_t$ 를 구할 때 $(1 - z_t)$ 는 여사건의 확률이라고 볼 수 있을 것이다. 별도의 Forgot Gate 대신 $(1 - z_t)$ 를 사용하고, Input Gate의 역할로 $z_t$ 를 사용하여 파라미터의 수와 학습 및 추론 과정에서의 연산량을 줄였다.
 
 GRU는 경량화된 모델임에도 LSTM과 비슷한 성능을 보여준다. 또 LSTM과 GRU는 추론과정에서 새로운 정보를 이전 상태 벡터에 곱하지 않고 더하기 때문에 Back Prop.에서 Gradient Vanishing/Explosion이 일어나지 않는다.
+
+> | [다음 포스트](./nlp2)
