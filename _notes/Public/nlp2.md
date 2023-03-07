@@ -84,4 +84,98 @@ Attention은 매우 좋은 성능을 낸다. Attention의 장점은 다음과 �
 
 이러한 장점으로, Attention이 적용된 Seq2Seq는 기계번역의 품질을 크게 향상 시키고 다른 분야에서도 널리 사용되었다. 더 나아가 Attention 만을 이용하여 구성한 Transformer는 ChatGPT, BERT와 같은 자연어 처리의 혁명적인 모델들을 만들어냈다.
 
+{:#Beam Search}
+## Beam Search
+Beam Search는 자연어 생성 테스트 과정에서 더 좋은 결과물을 얻을 수 있도록 한다. 테스트 과정에서는 다음 단어들을 순차적으로 예측한다. 이 때 매 time step마다 가장 높은 확률을 가지는 토큰 하나만을 선택하여 다음 step으로 넘어가는 것을 Greedy Decoding이라고 한다. 이 Greedy Decoding의 문제는, 모델 한 time step에서 예측이 틀렸을 때 모델이 틀린 예측을 바탕으로 계속해서 토큰을 생성한다는 것이다. 이를 되돌릴 수 없게 된다. 이는 최적의 예측값을 내놓을 수 없게 된다.
+
+이를 해결하기 위해 사용하는 방법 중 하나는 Exhaustive Search이다. Exhaustive Search를 이해하기 위해 다음 수식을 살펴보자.
+
+$$
+\begin{array}{ll}
+\text{For given length T,}\\
+\ \\
+\begin{aligned}
+P(y | x) &= P(y_1 | x)P(y_2 | y_1, x)P(y_3 | y_2, y_1, x) \cdots P(y_T | y_{T - 1}, \cdots , P_1, x)\\
+&= \prod_{i = 1}^T P(y_i|y_{i - 1}, y_{i - 2}, \cdots, y_1, x)
+\end{aligned}
+\end{array}
+$$
+
+언어 모델이 생성한 전체 시퀀스는 다음과 같은 확률로 표현될 수 있을 것이다. 우리가 원하는 것은 가장 높은 확률의 시퀀스, 즉 $\text{max}\ P(y|x)$ 인 시퀀스를 얻는 것이다. 이러한 관점에서 올바르지 못한 토큰을 생성하는 문제는 하나의 시퀀스 내의 어떤 토큰에 낮은 확률을 부여한 것으로 볼 수 있다. Exhausive Search가 제시하는 방법은 단 하나의 시퀀스만을 계속 생성하는 것이 아니라, 각 time step에서 확률을 가지고 있는 모든 토큰들로 여러 시퀀스를 생성하는 것이다. 그 후 모든 시퀀스에 대한 예측이 종료되었을 때(모든 시퀀스에 대해 모델이 종료 토큰을 내놓았을 때) $P(y|x)$ 가 가장 높은 시퀀스를 선택하는 것이다. 이렇게 하면 특정 시퀀스에서 올바른 토큰에 낮은 확률을 부여해 잘못 예측하더라도 올바른 토큰이 일단 시퀀스에 포함되므로 문제를 해결할 수 있다. 하지만 이런 방식을 사용할 경우 매 time step마다 시퀀스의 수는 기하급수적으로 증가한다. 이는 현실적으로 긴 시퀀스를 생성할 수 없는 문제를 낳는다.
+
+이를 해결하기 위해 사용하는 방법이 Beam Search이다. Beam Search는 Greedy Decoding과 Exhausive Search의 절충안으로 볼 수 있다. Beam Search는 매 time step마다 모든 토큰을 선택하는 대신 beam Size(일반적으로 5 ~ 10개) 만큼의 토큰만을 선택하여 시퀀스를 생성한다. 공간 복잡도는 동일하기는 하지만, 현실적으로 모든 토큰을 선택하는 것과 Beam size 만큼의 토큰을 선택하는 것은 큰 차이가 있다.
+
+그런데 여기서도 한가지 문제가 있다. 단순히 $P(y|x)$ 가 높은 시퀀스를 선택하면 길이가 긴 시퀀스는 선택될 가능성이 낮은 것이다. 일반적으로 한 토큰에 대한 확률 $p \in (0, 1)$ 일 것이다. 확률이 온전히 0이 나오거나 1이 나오는 경우는 사실상 불가능에 가깝기 때문이다. 따라서 길이가 긴 시퀀스일수록 확률을 구할 때 0과 1사이의 값이 더 많이 곱해진다. 따라서 길이가 긴 시퀀스의 전반적인 확률이 높더라도 단순히 길이가 긴 이유 때문에 절대적인 $P(y|x)$ 의 값은 낮게 나온다. 따라서 다음과 같은 식을 metric으로 사용한다.
+
+$$
+\begin{aligned}
+\text{score} (y_1, \cdots, y_t) &= \frac{log\ P_{LM}(y | x)}{t}\\
+&= \frac{\sum\limits_{i = 1}^t log\ P_{LM}(y_i | y_{i - 1}, \cdots, y_1, x)}{t}
+\end{aligned}
+$$
+
+로그의 성질에 따라 시퀀스의 전체 확률값은 덧셈으로 변환되어 해당 문제를 해결할 수 있다. 그리고 밑이 1보다 큰 로그를 사용하면 로그는 단조 증가하므로 score 값이 가장 큰 시퀀스를 택하면 된다.
+
+{:#BLEU Score}
+## BLEU Score
+우선 Precision, Recall Metric들을 자연어 생성 분야에 적용하는 방법을 살펴보자. 이들은 자연어 생성 분야에서 다음과 같이 정의된다.
+
+$$
+\begin{aligned}
+\text{precision} &= \frac{\text{\#(correct words)}}{\text{length of prediction}}\\
+\text{recall} &= \frac{\text{\#(correct words)}}{\text{length of reference}}
+\end{aligned}
+$$
+
+F1-Score는 precision과 recall을 이용하여 다른 경우와 동일하게 적용된다.
+
+이제 다음 예시를 통해 precision과 recall을 어떻게 구하는지 살펴보자.
+
+ex.
+
+Reference: <span style="color:#1e81b0">Half</span> of <span style="color:#1e81b0">my heart is in</span> Havana <span style="color:#1e81b0">ooh na</span> na \
+Predicted: <span style="color:#1e81b0">Half</span> as <span style="color:#1e81b0">my heart is in</span> Obama <span style="color:#1e81b0">ooh na</span>
+
+이때 precision과 recall은 다음과 같다.
+
+$$
+\begin{aligned}
+\text{precision} &= \frac{\text{\#(correct words)}}{\text{length of prediction}} = \frac{7}{9} \fallingdotseq 78\% \\
+\text{recall} &= \frac{\text{\#(correct words)}}{\text{length of reference}} = \frac{7}{10} = 70 \%
+\end{aligned}
+$$
+
+그리고 F1 Score는 다음과 같다.
+
+$$
+\text{F1-Score} = \frac{
+    \text{precision} \times \text{recall}
+}{
+    \frac{1}{2}(\text{precision} + \text{recall})
+} \fallingdotseq 73.78\%
+$$
+
+하지만 Precision, Recall은 자연어 생성에서 적합한 Metric이 아니다. 가령 다음과 같은 시퀀스가 생성되었다고 하자.
+
+Predicted: <span style="color:#1e81b0">Havana na in heart my is Half ooh of na</span>
+
+전혀 말이 안되는 문장이다. 하지만 Groud Truth(Reference)의 단어들이 모두 들어있기 때문에 precision과 recall 모두 100%가 나온다. 비록 precision과 recall은 분류 문제에서 자주 사용되는 metric이긴 하지만 자연어 처리에서는 적절하지 않음을 확인할 수 있다.
+
+대신 사용하는 것이 BLEU(_BiLingual Evaluation Understudy_) Score이다. BLEU는 단순한 precision 뿐만 아니라 N개의 연속된 단어(N-Gram)에서 얼마나 정확하게 예측했는지를 파악한다. 이는 다음과 같이 정의된다.
+
+$$
+\text{BLEU} = \text{min}\left(1,\ \frac{\text{length of prediction}}{\text{length of reference}} \right)\left(\prod_{i = 1}^N precision_i \right)^{\frac{1}{N}}
+$$
+
+식에서 볼 수 있다시피 BLEU는 precision만을 사용한다. 이는 자연어 Ground Truth의 특성 때문이다. 가령 Reference가 다음과 같다고 하자.
+
+Input: I love this movie very much.\
+Reference: 나는 이 영화를 <span style="color:red">정말</span> 많이 사랑한다.\
+Predicted: 나는 이 영화를 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 많이 사랑한다.
+
+예측된 문장과 ground truth 사이에는 큰 의미상의 차이가 없음에도 recall은 100%가 나오지 않는다. 이와 같은 자연어의 문제는 recall의 사용을 부적절하게 만든다.
+
+그리고 BLEU의 식에서 산술평균이나 조화평균이 아닌 기하평균을 사용함을 확인할 수 있다. 기하평균을 사용한 이유는 조화평균 <= 기하평균 <= 산술평균이기 때문에 기하평균을 일반적으로 Metric으로 얻기에 좋은 값을 얻을 수 있기 때문이다.
+
+
 > [이전 포스트](./nlp1) |
