@@ -122,8 +122,8 @@ $$
 
 $$
 \begin{aligned}
-\text{precision} &= \frac{\text{\#(correct words)}}{\text{length of prediction}}\\
-\text{recall} &= \frac{\text{\#(correct words)}}{\text{length of reference}}
+\text{precision} &= \frac{\text{#(correct words)}}{\text{length of prediction}}\\
+\text{recall} &= \frac{\text{#(correct words)}}{\text{length of reference}}
 \end{aligned}
 $$
 
@@ -140,8 +140,8 @@ Predicted: <span style="color:#1e81b0">Half</span> as <span style="color:#1e81b0
 
 $$
 \begin{aligned}
-\text{precision} &= \frac{\text{\#(correct words)}}{\text{length of prediction}} = \frac{7}{9} \fallingdotseq 78\% \\
-\text{recall} &= \frac{\text{\#(correct words)}}{\text{length of reference}} = \frac{7}{10} = 70 \%
+\text{precision} &= \frac{\text{#(correct words)}}{\text{length of prediction}} = \frac{7}{9} \fallingdotseq 78\% \\
+\text{recall} &= \frac{\text{#(correct words)}}{\text{length of reference}} = \frac{7}{10} = 70 \%
 \end{aligned}
 $$
 
@@ -171,7 +171,7 @@ $$
 
 Input: I love this movie very much.\
 Reference: 나는 이 영화를 <span style="color:red">정말</span> 많이 사랑한다.\
-Predicted: 나는 이 영화를 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 많이 사랑한다.
+Predicted:&nbsp; 나는 이 영화를 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 많이 사랑한다.
 
 예측된 문장과 ground truth 사이에는 큰 의미상의 차이가 없음에도 recall은 100%가 나오지 않는다. 이와 같은 자연어의 문제는 recall의 사용을 부적절하게 만든다.
 
