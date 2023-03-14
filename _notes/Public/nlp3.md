@@ -112,7 +112,7 @@ Residual Connection, 혹은 잔차연결은 ResNet에서 고안된 기법으로,
 
 Feed Forward는 전형적인 완전연결 계층이다. 이는 가장 기본적인 형태의 신경망으로 [이 링크](./step1-4)에서 자세히 살펴볼 수 있다.
 
-이는 트랜스포머 모델의 하나의 Attention Block으로 트랜스포머 모델들은 Attention Block을 더 쌓아서 구축한다.
+이는 트랜스포머 모델의 하나의 Attention Block으로, 트랜스포머 모델들은 Attention Block을 더 쌓아서 구축한다.
 
 {:#Positional Encoding}
 ## Positional Encoding
