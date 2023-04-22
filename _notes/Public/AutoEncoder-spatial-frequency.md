@@ -1,7 +1,7 @@
 ---
 title: AutoEnocoder와 공간주파수
 feed: show
-date: 23-04-2023
+date: 04-20-2023
 mathjax: true
 ---
 
