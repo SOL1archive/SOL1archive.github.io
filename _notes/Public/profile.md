@@ -44,3 +44,4 @@ Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 
 ## Career
 - CEO, Co-Founder, Kiron Co., Ltd., Korea
+- ML Engineer, EleutherAI
