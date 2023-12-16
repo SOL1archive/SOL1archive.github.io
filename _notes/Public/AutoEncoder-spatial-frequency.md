@@ -1,5 +1,5 @@
 ---
-title: AutoEnocoder와 공간주파수
+title: Autoencoder와 공간주파수
 feed: show
 date: 04-04-2023
 mathjax: true

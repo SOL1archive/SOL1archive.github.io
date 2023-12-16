@@ -1,6 +1,6 @@
 ---
 title: PyTorch를 처음 여행하는 히치하이커를 위한 안내서
-feed: hide
+feed: show
 date: 12-03-2023
 mathjax: true
 toc: true
@@ -100,9 +100,14 @@ class LightningModel(L.LightningModule):
 
 이처럼 PyTorch Lightning은 기존 PyTorch를 객체지향으로 재구성하는 것을 도와주는 라이브러리기 때문에 순수한 PyTorch 코드에서 변경하는 것도 용이하고, 코드의 유지보수성, 개선성도 좋아진다는 큰 장점을 가지고 있다.
 
+추가로 PyTorch Lightning을 통해 Autoencoder, GAN(_Generative Adversarial Networks_)등의 생성 모델을 구현하는 예제는 아래 링크에서 확인할 수 있다.
+> [Generative Models](https://github.com/SOL1archive/Generative-Models/tree/main)
+
+링크에서 확인할 수 있다시피, 모델의 구현과 학습을 깔끔하고 체계적으로 구현할 수 있다.
+
 ## Lightning AI `Lightning Flash`
 `Lightning Flash`는 PyTorch Lightning에서 파생된 라이브러리로, 매우 간단하게 모델을 Fine-Tuning하거나 사용할 수 있다. 
-비록 현재는 지원이 종료되었지만 Speech Recognition Task와 같이 학습시키기 까다로운 Task에서 편리하게 사용할 수 있다. Speech Recognition Task에서의 예시코드는 다음과 같다.
+비록 현재는 지원이 종료되었지만 여전히 유용하게 사용할 수 있다. Speech Recognition Task와 같이 학습시키기 까다로운 Task에서 편리하게 사용할 수 있다. Speech Recognition Task에서의 예시코드는 다음과 같다.
 
 우선 다음과 같이 라이브러리들을 불러온다.
 
