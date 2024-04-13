@@ -5,7 +5,7 @@ date: 04-04-2024
 mathjax: true
 ---
 
-## 기계는 생각할 수 있는가 (Can machine think) ?
+> Can machines think?
 
 > 본 리포트는 융합뇌공학입문(ENG2009) 기말 리포트 제출본임.
 
