@@ -1,11 +1,9 @@
 ---
-title: 기계는 생각할 수 있는가?
+title: 기계는 생각할 수 있는가? (Can machines think?)
 feed: show
 date: 04-04-2024
 mathjax: true
 ---
-
-> Can machines think?
 
 > 본 리포트는 융합뇌공학입문(ENG2009) 기말 리포트 제출본임.
 
