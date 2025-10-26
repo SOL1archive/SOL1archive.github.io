@@ -14,7 +14,7 @@ feed: show
 The LLMs are generally trained on large corpora, and most of them are consisted with web-crawled data. The LLMs are trained by learning to imitate the data. This is called _Supervised Fine-Tuning_ (SFT). THe objective function of the SFT can be expressed as below.
 
 $$
-\mathcal{L}_\text{SFT} = \frac{1}{T} \sum \limits _{t = 1}^T \log p_\theta (y_t, x, y_{<t})
+{L}_\text{SFT} (\theta) = \frac{1}{T} \sum \limits _{t = 1}^T \log p_\theta (y_t, x, y_{<t})
 $$
 
 The objective **doesn't reflect the human preference**. Instead, the LLMs naively learn how to shadow the plain text. At the result, LLMs' behaviors don't align with human values. The RLHF became the one of the most effective values.
@@ -50,18 +50,18 @@ They show that the optimal solution $\pi_r$ to the PPO objective above has an an
 $$
 \begin{aligned}
 \pi_r(y|x) &= \frac{1}{Z(x)} \pi_\text{ref}(y|x) \exp\left(\frac{1}{\beta} r_\phi(x, y)\right)\\
-Z(x) &= \sum \limits _{y \in \mathcal{Y}} \pi_\text{ref}(y|x) \exp\left(\frac{1}{\beta} r_\phi(x, y)\right)\\
+Z(x) &= \sum \limits _{y \in {Y}} \pi_\text{ref}(y|x) \exp\left(\frac{1}{\beta} r_\phi(x, y)\right)\\
 \end{aligned}
 $$
 
 where $Z(x)$ is a partition function. This equation shows that the optimal RLHF policy is just the original SFT policy, re-weighted by the exponentiated reward from the RM. More specifically, this result shows that for any preference, there **exists an optimal LLM that is dominant to other LLMs**.
 
-Authors use this relationship to re-parameterize the reward model's loss function. They can express the reward $r_\phi$ in terms of the policies $\pi_r$ and $\pi_\text{ref}$. By plugging this back into the original RM ranking loss, they derive a new objective that optimizes a single policy $\pi_\theta$ _directly_ on the preference data $\mathcal{D}$. By substituting the reward functions in the BT model with the result given above, **the partition function is simply canceled out**, removing the worry of intractability.
+Authors use this relationship to re-parameterize the reward model's loss function. They can express the reward $r_\phi$ in terms of the policies $\pi_r$ and $\pi_\text{ref}$. By plugging this back into the original RM ranking loss, they derive a new objective that optimizes a single policy $\pi_\theta$ _directly_ on the preference data ${D}$. By substituting the reward functions in the BT model with the result given above, **the partition function is simply canceled out**, removing the worry of intractability.
 
 This new objective is the **DPO Loss Function**:
 
 $$
-\mathcal{L}_\text{DPO} = - \mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w|x)}{\pi_\text{ref}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_\text{ref}(y_l|x)} \right) \right]
+{L}_\text{DPO} = - \mathbb{E}_{(x, y_w, y_l) \sim {D}} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w|x)}{\pi_\text{ref}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_\text{ref}(y_l|x)} \right) \right]
 $$
 
 Here, $\pi_\text{ref}$ is just the initial SFT policy (the reference model). This elegant loss function has a clear interpretation: it's a log-likelihood loss that directly maximizes the probability of the preferred response $y_w$ and minimizes the probability of the rejected response $y_l$, weighted by how far each is from the reference policy.
