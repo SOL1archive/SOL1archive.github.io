@@ -1,5 +1,5 @@
 ---
-title: "The Review for the paper, Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+title: "Paper Review, Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
 date: 26-10-2025
 mathjax: true
 feed: show
