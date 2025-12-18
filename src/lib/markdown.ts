@@ -80,10 +80,13 @@ export function getSortedPostsData() {
 }
 
 export async function getPostData(slugArray: string[]) {
-    const relativePath = slugArray.join(path.sep) + '.md';
+    // Decode slug parts to handle special characters (spaces, &, comma etc.)
+    const decodedSlug = slugArray.map(part => decodeURIComponent(part));
+    const relativePath = decodedSlug.join(path.sep) + '.md';
     const fullPath = path.join(notesDirectory, relativePath);
 
     if (!fs.existsSync(fullPath)) {
+        console.error(`Post not found at path: ${fullPath}`);
         throw new Error('Post not found');
     }
 
