@@ -151,6 +151,8 @@
 /* MathJax / Katex adjustments if needed */
 .content .katex-display {
     padding: 1rem;
+    margin: 2.5rem 0;
+    /* Significantly increased for better readability */
     overflow-x: auto;
     overflow-y: hidden;
 }

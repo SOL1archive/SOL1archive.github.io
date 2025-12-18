@@ -14,13 +14,34 @@ export default function TopBar() {
     useEffect(() => {
         // Check system preference on mount
         const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
-        setIsDarkMode(matchDark.matches);
+
+        const applyTheme = (dark: boolean) => {
+            setIsDarkMode(dark);
+            if (dark) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        };
+
+        // Initial check
+        applyTheme(matchDark.matches);
 
         // Listener for changes
-        const handler = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+        const handler = (e: MediaQueryListEvent) => applyTheme(e.matches);
         matchDark.addEventListener('change', handler);
         return () => matchDark.removeEventListener('change', handler);
     }, []);
+
+    const toggleTheme = () => {
+        const newMode = !isDarkMode;
+        setIsDarkMode(newMode);
+        if (newMode) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+    };
 
     return (
         <GlassContainer className={styles.topBar}>
@@ -44,7 +65,7 @@ export default function TopBar() {
                     <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.textLink} aria-label="View CV">
                         CV
                     </a>
-                    <button className={styles.iconLink} aria-label="Toggle Dark Mode">
+                    <button className={styles.iconLink} onClick={toggleTheme} aria-label="Toggle Dark Mode">
                         {isDarkMode ? <Moon size={20} /> : <Sun size={20} />}
                     </button>
                 </div>
