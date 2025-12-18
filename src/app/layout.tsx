@@ -22,15 +22,6 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <head>
-                {/* Katex CSS for proper math rendering */}
-                <link
-                    rel="stylesheet"
-                    href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
-                    integrity="sha384-wcIxkf4k558AjM3Cd3qQPzXo6pq9+uXlmeuchpdUyf7VpJ/V4t/3E7WzR9l9Yo2k"
-                    crossOrigin="anonymous"
-                />
-            </head>
             <body>
                 <main className="min-h-screen bg-background text-foreground flex flex-col">
                     <Analytics gaId={GA_ID} />
