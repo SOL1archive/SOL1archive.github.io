@@ -51,7 +51,7 @@
     color: hsl(var(--primary));
 }
 
-.actions {
+.right {
     display: flex;
     gap: 1.25rem;
     align-items: center;
