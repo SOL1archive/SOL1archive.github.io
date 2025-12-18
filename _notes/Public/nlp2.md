@@ -121,9 +121,7 @@ $$
 우선 Precision, Recall Metric들을 자연어 생성 분야에 적용하는 방법을 살펴보자. 이들은 자연어 생성 분야에서 다음과 같이 정의된다.
 
 $$
-\begin{aligned}
-\text{precision} &= \frac{\text{#(correct words)}}{\text{length of prediction}}\\
-\text{recall} &= \frac{\text{#(correct words)}}{\text{length of reference}}
+\begin{aligned} \text{precision} &= \frac{\text{#(\text{correct words})}}{\text{length of prediction}}\\ \text{recall} &= \frac{\text{#(\text{correct words})}}{\text{length of reference}}
 \end{aligned}
 $$
 
@@ -139,10 +137,7 @@ Predicted: <span style="color:#1e81b0">Half</span> as <span style="color:#1e81b0
 이때 precision과 recall은 다음과 같다.
 
 $$
-\begin{aligned}
-\text{precision} &= \frac{\text{#(correct words)}}{\text{length of prediction}} = \frac{7}{9} \fallingdotseq 78\% \\
-\text{recall} &= \frac{\text{#(correct words)}}{\text{length of reference}} = \frac{7}{10} = 70 \%
-\end{aligned}
+\begin{aligned} \text{precision} &= \frac{\text{#(\text{correct words})}}{\text{length of prediction}} = \frac{7}{9} \fallingdotseq 78\% \\ \text{recall} &= \frac{\text{#(\text{correct words})}}{\text{length of reference}} = \frac{7}{10} = 70 \% \end{aligned}
 $$
 
 그리고 F1 Score는 다음과 같다.
