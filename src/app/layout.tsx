@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import TopBar from '@/components/TopBar';
 import Analytics from '@/components/Analytics';
 import './globals.css';
+import 'katex/dist/katex.min.css'; // Ensure CSS matches the rendered math
 
 // TODO: Replace with actual GA ID from legacy config
 const GA_ID = '';
