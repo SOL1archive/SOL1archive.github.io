@@ -91,7 +91,15 @@ export async function getPostData(slugArray: string[]) {
     }
 
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
+
+    // Clean Kramdown syntax (e.g., {:toc}, {:#id}, * TOC)
+    // 1. Remove {:...} lines (style/attr extensions)
+    // 2. Remove * TOC block
+    const cleanedContent = fileContents
+        .replace(/\{:.*?\}/g, '') // remove inline or block attributes
+        .replace(/^\s*\*\s*TOC\s*$/gm, ''); // remove TOC marker
+
+    const matterResult = matter(cleanedContent);
 
     // Use remark to convert markdown into HTML string
     const processedContent = await remark()
