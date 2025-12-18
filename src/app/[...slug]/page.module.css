@@ -62,8 +62,8 @@
     font-size: 1.1rem;
     line-height: 1.7;
     color: var(--foreground);
-    max-width: 68ch;
-    /* Narrows the reading area */
+    max-width: 58ch;
+    /* Narrower reading area */
     margin: 0 auto;
     /* Centers the content block */
 }

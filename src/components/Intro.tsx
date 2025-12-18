@@ -19,7 +19,7 @@ export default function Intro() {
                     <Linkedin size={24} />
                 </a>
                 <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="CV">
-                    <FileText size={24} />
+                    <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>CV</span>
                 </a>
                 <a href="mailto:subinpark@yonsei.ac.kr" className={styles.iconLink} aria-label="Email">
                     <Mail size={24} />
