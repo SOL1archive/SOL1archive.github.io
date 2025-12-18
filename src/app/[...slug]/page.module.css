@@ -62,7 +62,7 @@
     font-size: 1.1rem;
     line-height: 1.7;
     color: var(--foreground);
-    max-width: 63ch;
+    max-width: 100ch;
     /* Adjusted to average width */
     margin: 0 auto;
     /* Centers the content block */
