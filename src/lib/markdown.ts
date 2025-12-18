@@ -111,7 +111,7 @@ export async function getProfileData() {
         .use(remarkGfm)
         .use(remarkMath)
         .use(remarkRehype, { allowDangerousHtml: true })
-        .use(rehypeKatex, { strict: 'ignore', throwOnError: false })
+        .use(rehypeKatex, { strict: 'ignore', trust: true, throwOnError: false })
         .use(rehypeHighlight)
         .use(rehypeSlug)
         .use(rehypeStringify)
@@ -152,6 +152,7 @@ export async function getPostData(slugArray: string[]) {
         .use(remarkRehype, { allowDangerousHtml: true })
         .use(rehypeKatex, {
             strict: 'ignore',
+            trust: true, // Allow specialized environments
             throwOnError: false,
             errorColor: '#cc0000'
         })
