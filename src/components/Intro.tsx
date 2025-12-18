@@ -12,21 +12,17 @@ export default function Intro() {
             </p>
 
             <div className={styles.links}>
-                <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                    <Github size={20} />
-                    <span>GitHub</span>
+                <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="GitHub">
+                    <Github size={24} />
                 </a>
-                <a href="https://linkedin.com/in/subinbag" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                    <Linkedin size={20} />
-                    <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/subin-park-605560278" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="LinkedIn">
+                    <Linkedin size={24} />
                 </a>
-                <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                    <FileText size={20} />
-                    <span>CV</span>
+                <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="CV">
+                    <FileText size={24} />
                 </a>
-                <a href="mailto:your.email@example.com" className={styles.link}>
-                    <Mail size={20} />
-                    <span>Email</span>
+                <a href="mailto:subinpark@yonsei.ac.kr" className={styles.iconLink} aria-label="Email">
+                    <Mail size={24} />
                 </a>
             </div>
         </section>

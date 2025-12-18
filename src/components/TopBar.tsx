@@ -59,7 +59,7 @@ export default function TopBar() {
                     <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="GitHub">
                         <Github size={20} />
                     </a>
-                    <a href="https://linkedin.com/in/subinbag" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/subin-park-605560278" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="LinkedIn">
                         <Linkedin size={20} />
                     </a>
                     <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.textLink} aria-label="View CV">
