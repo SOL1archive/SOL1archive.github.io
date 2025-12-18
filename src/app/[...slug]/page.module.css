@@ -1,0 +1,162 @@
+.layout {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.postContainer {
+    flex: 1;
+    padding: 3rem 4rem;
+    background: var(--glass-bg);
+    min-height: 80vh;
+    min-width: 0;
+    /* Prevent overflow */
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: none;
+        /* Hide for now on mobile, or move to drawer */
+    }
+
+    .postContainer {
+        padding: 2rem;
+    }
+}
+
+.header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.meta {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--secondary);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Typography / Prose Styles for Markdown Content */
+.content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--foreground);
+}
+
+.content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.content ul,
+.content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content code {
+    background: var(--card-bg);
+    /* Use card bg for inline code */
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    border: 1px solid var(--card-border);
+}
+
+.content pre {
+    background: #1e1e1e !important;
+    /* Force dark background for code blocks */
+    color: #d4d4d4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--card-border);
+}
+
+.content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content blockquote {
+    border-left: 4px solid var(--primary);
+    margin-left: 0;
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: var(--secondary);
+    background: rgba(var(--primary), 0.1);
+    /* Slight tint if possible, or just transparent */
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.content a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* MathJax / Katex adjustments if needed */
+.content .katex-display {
+    padding: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+@media (max-width: 768px) {
+    .postContainer {
+        padding: 2rem;
+    }
+}

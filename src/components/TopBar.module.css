@@ -1,0 +1,76 @@
+.topBar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brandLink {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
+    transition: opacity 0.2s;
+}
+
+.brandLink:hover {
+    opacity: 0.7;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--foreground);
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.navLink:hover {
+    opacity: 1;
+}
+
+.active {
+    opacity: 1;
+    color: hsl(var(--primary));
+}
+
+.actions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.iconLink {
+    color: var(--foreground);
+    opacity: 0.7;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.iconLink:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
