@@ -22,7 +22,8 @@
     font-size: 1.25rem;
     color: var(--secondary);
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    /* Reduced from 2rem */
     max-width: 600px;
 }
 
