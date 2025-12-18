@@ -20,9 +20,9 @@ export default function Intro() {
                     <Linkedin size={20} />
                     <span>LinkedIn</span>
                 </a>
-                <a href="/cv/resume.pdf" download className={styles.link}>
+                <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
                     <FileText size={20} />
-                    <span>Resume</span>
+                    <span>CV</span>
                 </a>
                 <a href="mailto:your.email@example.com" className={styles.link}>
                     <Mail size={20} />

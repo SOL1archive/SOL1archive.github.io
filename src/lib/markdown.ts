@@ -9,6 +9,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import rehypeStringify from 'rehype-stringify';
 import remarkRehype from 'remark-rehype';
+import { parse, isValid } from 'date-fns';
 
 const notesDirectory = path.join(process.cwd(), '_notes');
 
@@ -65,18 +66,61 @@ export function getSortedPostsData() {
         return {
             id,
             slug,
-            ...(matterResult.data as { date: string; title: string; category?: string }),
+            ...(matterResult.data as { date: string; title: string; category?: string; feed?: string }),
         };
     });
 
+    // Filter out posts with feed: 'hide'
+    const visiblePosts = allPostsData.filter(post => post.feed !== 'hide');
+
     // Sort posts by date
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
+    return visiblePosts.sort((a, b) => {
+        const dateA = parse(a.date, 'dd-MM-yyyy', new Date());
+        const dateB = parse(b.date, 'dd-MM-yyyy', new Date());
+        // If invalid, fallback to string comp or 0? 
+        // Let's handle generic Date parsing if format fails
+        const validA = isValid(dateA) ? dateA : new Date(a.date);
+        const validB = isValid(dateB) ? dateB : new Date(b.date);
+
+        if (validA < validB) {
             return 1;
         } else {
             return -1;
         }
     });
+}
+
+export async function getProfileData() {
+    // Look for profile.md in _notes/Public/profile.md
+    const fullPath = path.join(notesDirectory, 'Public', 'profile.md');
+
+    if (!fs.existsSync(fullPath)) {
+        console.warn('Profile not found at ' + fullPath);
+        return null;
+    }
+
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    // Clean Kramdown
+    const cleanedContent = fileContents
+        .replace(/\{:.*?\}/g, '')
+        .replace(/^\s*\*\s*TOC\s*$/gm, '');
+
+    const matterResult = matter(cleanedContent);
+
+    const processedContent = await remark()
+        .use(remarkGfm)
+        .use(remarkMath)
+        .use(remarkRehype, { allowDangerousHtml: true })
+        .use(rehypeKatex, { strict: 'ignore', throwOnError: false })
+        .use(rehypeHighlight)
+        .use(rehypeSlug)
+        .use(rehypeStringify)
+        .process(matterResult.content);
+
+    return {
+        contentHtml: processedContent.toString(),
+        ...matterResult.data
+    };
 }
 
 export async function getPostData(slugArray: string[]) {

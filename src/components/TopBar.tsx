@@ -34,15 +34,15 @@ export default function TopBar() {
                     <Link href="/posts" className={`${styles.navLink} ${pathname.startsWith('/posts') ? styles.active : ''}`}>Posts</Link>
                 </nav>
 
-                <div className={styles.actions}>
+                <div className={styles.right}>
                     <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="GitHub">
                         <Github size={20} />
                     </a>
                     <a href="https://linkedin.com/in/subinbag" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="LinkedIn">
                         <Linkedin size={20} />
                     </a>
-                    <a href="/cv/resume.pdf" download className={styles.iconLink} aria-label="Download CV">
-                        <FileText size={20} />
+                    <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.textLink} aria-label="View CV">
+                        CV
                     </a>
                     <button className={styles.iconLink} aria-label="Toggle Dark Mode">
                         {isDarkMode ? <Moon size={20} /> : <Sun size={20} />}
