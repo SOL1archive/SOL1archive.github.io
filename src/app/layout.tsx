@@ -3,6 +3,7 @@ import TopBar from '@/components/TopBar';
 import Analytics from '@/components/Analytics';
 import './globals.css';
 import 'katex/dist/katex.min.css'; // Ensure CSS matches the rendered math
+import 'highlight.js/styles/github-dark.css'; // Syntax highlighting
 
 // TODO: Replace with actual GA ID from legacy config
 const GA_ID = '';
