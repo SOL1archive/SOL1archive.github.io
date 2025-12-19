@@ -151,12 +151,38 @@
 }
 
 /* MathJax / Katex adjustments if needed */
+/* MathJax / Katex adjustments if needed */
 .content .katex-display {
     padding: 1rem;
     margin: 2.5rem 0;
     /* Significantly increased for better readability */
     overflow-x: auto;
     overflow-y: hidden;
+}
+
+/* Table Styles */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+}
+
+.content th,
+.content td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--glass-border);
+    text-align: left;
+}
+
+.content th {
+    background-color: rgba(150, 150, 150, 0.1);
+    /* Light gray header */
+    font-weight: 600;
+}
+
+.content tr:hover {
+    background-color: rgba(150, 150, 150, 0.05);
 }
 
 @media (max-width: 768px) {
