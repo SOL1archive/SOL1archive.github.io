@@ -29,6 +29,13 @@
     opacity: 0.7;
 }
 
+.left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    /* Space between Brand and Nav */
+}
+
 .nav {
     display: flex;
     gap: 2rem;

@@ -46,14 +46,16 @@ export default function TopBar() {
     return (
         <GlassContainer className={styles.topBar}>
             <div className={styles.container}>
-                <div className={styles.brand}>
-                    <Link href="/" className={styles.brandLink}>SOL1 Archive</Link>
-                </div>
+                <div className={styles.left}>
+                    <div className={styles.brand}>
+                        <Link href="/" className={styles.brandLink}>SOL1 Archive</Link>
+                    </div>
 
-                <nav className={styles.nav}>
-                    <Link href="/" className={`${styles.navLink} ${pathname === '/' ? styles.active : ''}`}>Home</Link>
-                    <Link href="/posts" className={`${styles.navLink} ${pathname.startsWith('/posts') ? styles.active : ''}`}>Posts</Link>
-                </nav>
+                    <nav className={styles.nav}>
+                        <Link href="/" className={`${styles.navLink} ${pathname === '/' ? styles.active : ''}`}>Home</Link>
+                        <Link href="/posts" className={`${styles.navLink} ${pathname.startsWith('/posts') ? styles.active : ''}`}>Posts</Link>
+                    </nav>
+                </div>
 
                 <div className={styles.right}>
                     <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="GitHub">
