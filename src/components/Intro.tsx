@@ -7,8 +7,8 @@ export default function Intro() {
         <section className={styles.container}>
             <h1 className={styles.name}>SOL1 Archive</h1>
             <p className={styles.bio}>
-                Researcher in Machine Learning & Logic. <br />
-                Archive of thoughts, mathematics, and code.
+                Student @ Yonsei Univ., Seoul <br />
+                Researcher in Machine Learning, NLP.
             </p>
 
             <div className={styles.links}>
