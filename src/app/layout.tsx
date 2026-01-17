@@ -5,6 +5,8 @@ import './globals.css';
 import 'katex/dist/katex.min.css'; // Ensure CSS matches the rendered math
 import 'highlight.js/styles/github-dark.css'; // Syntax highlighting
 
+const GA_ID = 'G-BVCTG6PEZP';
+
 export const metadata: Metadata = {
     title: 'SOL1 Archive',
     description: 'Personal Research Blog',
@@ -22,7 +24,7 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <main className="min-h-screen bg-background text-foreground flex flex-col">
-                    <Analytics />
+                    <Analytics gaId={GA_ID} />
                     <TopBar />
                     <div className="flex-1 w-full max-w-[1200px] mx-auto p-8">
                         {children}
