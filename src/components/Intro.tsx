@@ -8,7 +8,7 @@ export default function Intro() {
             <h1 className={styles.name}>SOL1 Archive</h1>
             <p className={styles.bio}>
                 Student @ Yonsei Univ., Seoul <br />
-                Researcher in Machine Learning, NLP.
+                Researcher in Machine Learning: NLP & RL.
             </p>
 
             <div className={styles.links}>
