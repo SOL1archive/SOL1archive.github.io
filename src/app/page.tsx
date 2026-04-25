@@ -21,7 +21,7 @@ export default function Home() {
                         Student at Yonsei University and majoring computer science and mathematics, working on NLP and reinforcement learning.
                     </p>
                     <div className="intro-links">
-                        <Link className="intro-link" href="/about">About</Link>
+                        <Link className="intro-link intro-link-primary" href="/about">About</Link>
                         <a className="intro-link" href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer">
                             <FileText size={14} /> CV
                         </a>
