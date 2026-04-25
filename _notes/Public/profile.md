@@ -43,5 +43,4 @@ Github: [Github Overview(Click Here!)](https://github.com/SOL1archive)
 - 2nd year Undergrad - Library and Information Science - Yonsei University, Seoul, Korea
 
 ## Career
-- CEO, Co-Founder, Kiron Co., Ltd., Korea
 - ML Engineer, EleutherAI

@@ -2,76 +2,113 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Github, Linkedin, FileText, Moon, Sun } from 'lucide-react';
-import GlassContainer from './GlassContainer';
-import styles from './TopBar.module.css';
+import { Github, Linkedin, Menu, Moon, Sun, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+
+const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/posts', label: 'Posts' },
+    { href: '/about', label: 'About' },
+];
 
 export default function TopBar() {
     const pathname = usePathname();
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
-        // Check system preference on mount
-        const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-        const applyTheme = (dark: boolean) => {
-            setIsDarkMode(dark);
-            if (dark) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
-            }
-        };
-
-        // Initial check
-        applyTheme(matchDark.matches);
-
-        // Listener for changes
-        const handler = (e: MediaQueryListEvent) => applyTheme(e.matches);
-        matchDark.addEventListener('change', handler);
-        return () => matchDark.removeEventListener('change', handler);
+        const stored = window.localStorage.getItem('sol1-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const dark = stored ? stored === 'dark' : prefersDark;
+        setIsDarkMode(dark);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
     }, []);
 
+    useEffect(() => {
+        const onScroll = () => setIsScrolled(window.scrollY > 8);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [pathname]);
+
     const toggleTheme = () => {
-        const newMode = !isDarkMode;
-        setIsDarkMode(newMode);
-        if (newMode) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-        }
+        const next = !isDarkMode;
+        setIsDarkMode(next);
+        document.documentElement.setAttribute('data-theme', next ? 'dark' : 'light');
+        window.localStorage.setItem('sol1-theme', next ? 'dark' : 'light');
+        window.dispatchEvent(new Event('themechange'));
+    };
+
+    const isActive = (href: string) => {
+        if (href === '/') return pathname === '/';
+        if (href === '/posts') return pathname === '/posts' || pathname.startsWith('/Public/');
+        return pathname === href || pathname.startsWith(`${href}/`);
     };
 
     return (
-        <GlassContainer className={styles.topBar}>
-            <div className={styles.container}>
-                <div className={styles.left}>
-                    <div className={styles.brand}>
-                        <Link href="/" className={styles.brandLink}>SOL1 Archive</Link>
-                    </div>
+        <header className={`topbar ${isScrolled || isMenuOpen ? 'is-scrolled' : ''}`}>
+            <div className="container topbar-inner">
+                <Link href="/" className="brand" aria-label="Subin Park home">
+                    <span className="brand-glyph" aria-hidden>◐</span>
+                    <span className="brand-name">Subin Park</span>
+                </Link>
 
-                    <nav className={styles.nav}>
-                        <Link href="/" className={`${styles.navLink} ${pathname === '/' ? styles.active : ''}`}>Home</Link>
-                        <Link href="/posts" className={`${styles.navLink} ${pathname.startsWith('/posts') ? styles.active : ''}`}>Posts</Link>
-                    </nav>
-                </div>
+                <nav className="nav" aria-label="Primary navigation">
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={`nav-link ${isActive(item.href) ? 'is-active' : ''}`}
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                </nav>
 
-                <div className={styles.right}>
-                    <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="GitHub">
-                        <Github size={20} />
+                <div className="actions">
+                    <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className="icon-btn hide-sm" aria-label="GitHub">
+                        <Github size={18} strokeWidth={1.8} />
                     </a>
-                    <a href="https://www.linkedin.com/in/subin-park-605560278" target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="LinkedIn">
-                        <Linkedin size={20} />
+                    <a href="https://www.linkedin.com/in/subin-park-605560278" target="_blank" rel="noopener noreferrer" className="icon-btn hide-sm" aria-label="LinkedIn">
+                        <Linkedin size={18} strokeWidth={1.8} />
                     </a>
-                    <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.textLink} aria-label="View CV">
+                    <a href="/cv/Subin_Park_CV.pdf" target="_blank" rel="noopener noreferrer" className="cv-link" aria-label="View CV">
                         CV
                     </a>
-                    <button className={styles.iconLink} onClick={toggleTheme} aria-label="Toggle Dark Mode">
-                        {isDarkMode ? <Moon size={20} /> : <Sun size={20} />}
+                    <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
+                        {isDarkMode ? <Moon size={18} strokeWidth={1.8} /> : <Sun size={18} strokeWidth={1.8} />}
+                    </button>
+                    <button className="icon-btn menu-btn" onClick={() => setIsMenuOpen((open) => !open)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
+                        {isMenuOpen ? <X size={18} strokeWidth={1.8} /> : <Menu size={18} strokeWidth={1.8} />}
                     </button>
                 </div>
             </div>
-        </GlassContainer>
+
+            {isMenuOpen && (
+                <nav className="mobile-menu" aria-label="Mobile navigation">
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={`mobile-link ${isActive(item.href) ? 'is-active' : ''}`}
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                    <div className="mobile-sep" />
+                    <a href="https://github.com/SOL1archive" target="_blank" rel="noopener noreferrer" className="mobile-link">
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/subin-park-605560278" target="_blank" rel="noopener noreferrer" className="mobile-link">
+                        LinkedIn
+                    </a>
+                </nav>
+            )}
+        </header>
     );
 }

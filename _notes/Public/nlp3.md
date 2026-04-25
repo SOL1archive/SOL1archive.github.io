@@ -130,7 +130,7 @@ $$
 또 트랜스포머의 경우 일반적으로 가장 좋은 성능을 보이는 learning rate scheduling이 존재한다. 먼저 learning rate scheduling에 대한 설명은 [이 링크](./step2-4#학습률-감쇠) 에 설명되어 있다. 트랜스포머의 경우 일반적으로 learning rate scheduling은 다음과 같이 정의된다.
 
 $$
-\text{learning rate} = d_{model}^{-0.5} \cdot \text{min}(\text{#step}^{-0.5}, \text{#step} \cdot \text{(warmup steps)}^{-1.5})
+\text{learning rate} = d_{model}^{-0.5} \cdot \min(\text{\#step}^{-0.5}, \text{\#step} \cdot \text{(warmup steps)}^{-1.5})
 $$
 
 이는 모델의 파라미터가 local optima에 갖히지 않게 도와주고 파라미터가 diverge하지 않게 도와준다. 식을 살펴보면 전반적으로 매 epoch step을 지날때마다 learning rate가 감소할 것임을 확인할 수 있다. 이는 모델이 더 최적화되어 성능을 높여준다.

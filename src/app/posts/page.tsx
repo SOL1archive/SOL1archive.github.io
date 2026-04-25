@@ -1,30 +1,25 @@
-import Link from 'next/link';
+import { Suspense } from 'react';
 import { getSortedPostsData } from '@/lib/markdown';
-import GlassContainer from '@/components/GlassContainer';
-import styles from '../home.module.css'; // Reuse home styles
+import PostsFilter from '@/components/PostsFilter';
 
 export default function Posts() {
-    const allPostsData = getSortedPostsData();
+    const posts = getSortedPostsData();
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title} style={{ textAlign: 'center', marginBottom: '3rem' }}>All Posts</h1>
-
-            <div className={styles.list}>
-                {allPostsData.map(({ id, date, title, category }) => (
-                    <Link href={`/${id}`} key={id} className={styles.cardLink}>
-                        <GlassContainer className={styles.card}>
-                            <div className={styles.cardContent}>
-                                <div className={styles.cardHeader}>
-                                    <time className={styles.date}>{date}</time>
-                                    {category && <span className={styles.category}>{category}</span>}
-                                </div>
-                                <h3 className={styles.cardTitle}>{title}</h3>
-                            </div>
-                        </GlassContainer>
-                    </Link>
-                ))}
+        <div className="page posts-page">
+            <div className="container">
+                <div className="posts-hero">
+                    <div className="eyebrow" style={{ marginBottom: 20 }}>
+                        <span className="dot" style={{ background: 'var(--accent)' }} />
+                        Writing
+                    </div>
+                    <h1>All posts</h1>
+                    <p>Notes, paper reviews, lecture material, and essays. Filter by topic below.</p>
+                </div>
             </div>
+            <Suspense fallback={null}>
+                <PostsFilter posts={posts} />
+            </Suspense>
         </div>
     );
 }

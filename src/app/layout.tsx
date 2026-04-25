@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import TopBar from '@/components/TopBar';
+import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
 import './globals.css';
-import 'katex/dist/katex.min.css'; // Ensure CSS matches the rendered math
-import 'highlight.js/styles/github-dark.css'; // Syntax highlighting
+import 'katex/dist/katex.min.css';
 
 const GA_ID = 'G-BVCTG6PEZP';
 
 export const metadata: Metadata = {
     title: 'SOL1 Archive',
-    description: 'Personal Research Blog',
+    description: 'Subin Park research notes, paper reviews, and essays.',
     icons: {
-        icon: '/favicon.ico',
+        icon: '/favicon.svg',
     },
 };
 
@@ -21,15 +21,26 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
+            <head>
+                <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-subset.css"
+                />
+            </head>
             <body>
-                <main className="min-h-screen bg-background text-foreground flex flex-col">
-                    <Analytics gaId={GA_ID} />
+                <Analytics gaId={GA_ID} />
+                <div className="site-shell">
                     <TopBar />
-                    <div className="flex-1 w-full max-w-[1200px] mx-auto p-8">
-                        {children}
-                    </div>
-                </main>
+                    <div className="topbar-spacer" />
+                    <main className="site-main">{children}</main>
+                    <Footer />
+                </div>
             </body>
         </html>
     );

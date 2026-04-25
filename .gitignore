@@ -8,3 +8,7 @@ _notes/Public/.obsidian
 
 .DS_Store
 node_modules
+.next
+out
+tsconfig.tsbuildinfo
+public/cv
